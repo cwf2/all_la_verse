@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Corpus>
+  <TessDocument id="ausonius.cento_nuptialis">
+    <Author>ausonius</Author>
+    <Display>Cento Nuptialis</Display>
+    <Abbr>aus. cent. nupt.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2008.01.0605%3Asection%3D4</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa003.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.cupido_cruciatur">
+    <Author>ausonius</Author>
+    <Display>Cupido cruciatur</Display>
+    <Abbr>aus. cup. cruc.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0607</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa005.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.de_bissula">
+    <Author>ausonius</Author>
+    <Display>De Bissula</Display>
+    <Abbr>aus. biss.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0603</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa001.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.de_herediolo">
+    <Author>ausonius</Author>
+    <Display>De Herediolo</Display>
+    <Abbr>aus. idyll. 3.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0608</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa006.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.de_xii_caesaribus">
+    <Author>ausonius</Author>
+    <Display>Ausonii de XII Caesaribus per Suetonium Tranquillum scriptis</Display>
+    <Abbr>aus. caes.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0604</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa002.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.eclogarum_liber">
+    <Author>ausonius</Author>
+    <Display>Eclogarum Liber</Display>
+    <Abbr>aus. ecl. 13.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0609</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0045.stoa007.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.ephemeris_id_est_totius_diei_negotium">
+    <Author>ausonius</Author>
+    <Display>Ephemeris</Display>
+    <Abbr>aus. ephem.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0610</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa008.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.epicedion_in_patrem">
+    <Author>ausonius</Author>
+    <Display>Epicedion in Patrem</Display>
+    <Abbr>aus. idyll. 2.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0607</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa005.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.epigrammata_ausonii_de_diversis_rebus">
+    <Author>ausonius</Author>
+    <Display>Epigrammata Ausonii de diversis rebus</Display>
+    <Abbr>aus. epigr.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 2. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0612</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa010.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.epistularum">
+    <Author>ausonius</Author>
+    <Display>Epistularum</Display>
+    <Abbr>aus. ep.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 2. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0613</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa011.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.epitaphia_heroum_qui_bello_troico_interfuerunt">
+    <Author>ausonius</Author>
+    <Display>Epitaphia heroum qui bello Troico interfuerunt</Display>
+    <Abbr>aus. epit.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0614</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa012.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.griphus_ternarii_numeri">
+    <Author>ausonius</Author>
+    <Display>Griphus Ternarii numeri</Display>
+    <Abbr>aus. griph.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0607</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa005.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.libri_de_fastis_conclusio">
+    <Author>ausonius</Author>
+    <Display>Fasti</Display>
+    <Abbr>aus. fast.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0617</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa017.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.ludus_septem_sapientum">
+    <Author>ausonius</Author>
+    <Display>Ludus Septem Sapientum</Display>
+    <Abbr>aus. sap.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0618</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa018.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.mosella">
+    <Author>ausonius</Author>
+    <Display>Mosella</Display>
+    <Abbr>aus. mos.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0619</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa019.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.oratio_consulis_ausonii_versibus_rhopalicis">
+    <Author>ausonius</Author>
+    <Display>Oratio Consulis Ausonii Versibus Ropalicis</Display>
+    <Abbr>aus. orat.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0619</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa019.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.ordo_urbium_nobilium">
+    <Author>ausonius</Author>
+    <Display>Ordo Urbium Nobilium</Display>
+    <Abbr>aus. urb.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0621</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa021.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.parentalia">
+    <Author>ausonius</Author>
+    <Display>Parentalia</Display>
+    <Abbr>aus. par.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0622</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa022.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.praefatiunculae">
+    <Author>ausonius</Author>
+    <Display>Praefatiunculae</Display>
+    <Abbr>aus. praef.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0628</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa025.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.precationes">
+    <Author>ausonius</Author>
+    <Display>Precationes</Display>
+    <Abbr>aus. idyll. 8_or_9.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0623</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa026.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.technopaegnion">
+    <Author>ausonius</Author>
+    <Display>Technopaegnion</Display>
+    <Abbr>aus. tech.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0625</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:stoa0045.stoa028.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="ausonius.versus_paschales_pro_augusto_dicti">
+    <Author>ausonius</Author>
+    <Display>Versus Paschales Pro Augusto Dicti</Display>
+    <Abbr>aus. idyll.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0624</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0045.stoa027.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="catullus.carmina">
+    <Author>catullus</Author>
+    <Display>Carmina</Display>
+    <Abbr>cat.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edition of E. T. Merrill</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0003</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0472.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-54</PubDate></TessDocument>
+  <TessDocument id="claudian.carmina_minora">
+    <Author>claudian</Author>
+    <Display>Carmina Minora</Display>
+    <Abbr>claud. cm.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 2. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0693</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa001.perseus-lat1</URI>
+  </TessDocument>
+  <TessDocument id="claudian.de_bello_gildonico">
+    <Author>claudian</Author>
+    <Display>De Bello Gildonico</Display>
+    <Abbr>claud. gild.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0698</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa002.perseus-lat1</URI>
+  <PubDate cert="0">398</PubDate></TessDocument>
+  <TessDocument id="claudian.de_bello_gothico">
+    <Author>claudian</Author>
+    <Display>de Bello Gothico</Display>
+    <Abbr>claud. goth.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Maurice Platnaeur, Claudian, Vol 2. London; New York: William Heinemann; G.P. Putnam's Sons, 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0690</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa003.perseus-lat1</URI>
+  <PubDate cert="0">402</PubDate></TessDocument>
+  <TessDocument id="claudian.de_consulatu_stilichonis">
+    <Author>claudian</Author>
+    <Display>De consulatu Stilichonis</Display>
+    <Abbr>claud. cons. stil.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Maurice Platnaeur, Claudian, Vol 1-2. London; New York: William Heinemann; G.P. Putnam's Sons, 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0684</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa004.perseus-lat1</URI>
+  <PubDate cert="0">400</PubDate></TessDocument>
+  <TessDocument id="claudian.de_raptu_proserpinae">
+    <Author>claudian</Author>
+    <Display>de raptu Proserpinae</Display>
+    <Abbr>claud. rapt. pros</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Maurice Platnaeur, Claudian, Vol 2. London; New York: William Heinemann; G.P. Putnam's Sons, 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0685</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa005.perseus-lat1</URI>
+  <PubDate cert="0">404</PubDate></TessDocument>
+  <TessDocument id="claudian.epithalamium_de_nuptiis_honorii_augusti">
+    <Author>claudian</Author>
+    <Display>Epithalamium de nuptiis Honorii Augusti</Display>
+    <Abbr>claud. nupt.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Maurice Platnaeur, Claudian, Vol 1. London; New York: William Heinemann; G.P. Putnam's Sons, 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0691</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa006.perseus-lat1</URI>
+  <PubDate cert="0">398</PubDate></TessDocument>
+  <TessDocument id="claudian.in_consulatum_olybrii_et_probini">
+    <Author>claudian</Author>
+    <Display>Panegyricus dictus Probino et Olybrio consulibus</Display>
+    <Abbr>claud. cons. olyb. et prob.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0694</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa014.perseus-lat1</URI>
+  <PubDate cert="0">395</PubDate></TessDocument>
+  <TessDocument id="claudian.in_eutropium">
+    <Author>claudian</Author>
+    <Display>In Eutropium</Display>
+    <Abbr>claud. eutr.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0689</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa008.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="claudian.in_rufinum">
+    <Author>claudian</Author>
+    <Display>In Rufinum</Display>
+    <Abbr>claud. ruf.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0697</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa009.perseus-lat1</URI>
+  <PubDate cert="0">397</PubDate></TessDocument>
+  <TessDocument id="claudian.panegyricus_de_quarto_consulatu_honorii_augusti">
+    <Author>claudian</Author>
+    <Display>Panegyricus de quarto consulatu Honorii Augusti</Display>
+    <Abbr>claud. 4 hon.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0695</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa011.perseus-lat1</URI>
+  <PubDate cert="0">396</PubDate></TessDocument>
+  <TessDocument id="claudian.panegyricus_de_sexto_consulatu_honorii_augusti">
+    <Author>claudian</Author>
+    <Display>Panegyricus de sexto consulatu Honorii Augusti</Display>
+    <Abbr>claud. 6 hon.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 2. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0687</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa012.perseus-lat1</URI>
+  <PubDate cert="0">398</PubDate></TessDocument>
+  <TessDocument id="claudian.panegyricus_de_tertio_consulatu_honorii_augusti">
+    <Author>claudian</Author>
+    <Display>Panegyricus de tertio consulatu Honorii Augusti</Display>
+    <Abbr>claud. 3 hon.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0696</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa010.perseus-lat1</URI>
+  <PubDate cert="0">404</PubDate></TessDocument>
+  <TessDocument id="claudian.panegyricus_dictus_manlio_theodoro_consuli">
+    <Author>claudian</Author>
+    <Display> Panegyricus dictus Manlio Theodoro consuli</Display>
+    <Abbr>claud. mall. theo.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Claudian, Vol 1. Claudianus, Claudius. Maurice Platnaeur. William Heinemann; G.P. Putnam's Sons. London; New York. 1922. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0692</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0089.stoa013.perseus-lat1</URI>
+  <PubDate cert="0">399</PubDate></TessDocument>
+  <TessDocument id="corippus.johannis">
+    <Author>corippus</Author>
+    <Display>Johannis</Display>
+    <Abbr>coripp. johann.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy>Neil Bernstein</AddedBy>
+    <URI/>
+  <PubDate cert="0"/></TessDocument>
+  <TessDocument id="dracontius.romulea_10">
+    <Author>dracontius</Author>
+    <Display>Medea</Display>
+    <Abbr>drac. rom.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay>Monumenta Germaniae Historica</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.dmgh.de/de/fs1/object/display/bsb00000826_00006.html?sortIndex=010%3A010%3A0014%3A010%3A00%3A00</DigitalSourceURL>
+    <AddedBy>Lavinia Galli Milic</AddedBy>
+    <URI/>
+  </TessDocument>
+  <TessDocument id="ennius.annales">
+    <Author>ennius</Author>
+    <Display>Annales</Display>
+    <Abbr>ennius ann.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  </TessDocument>
+  <TessDocument id="ennodius.opera">
+    <Author>ennodius</Author>
+    <Display>Opera</Display>
+    <Abbr>enn. carm.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Magni Felicis Ennodii Opera, ed. G. Hartel. CSEL 6. Vienna, 1882.</PrintSource>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  </TessDocument>
+  <TessDocument id="horace.ars_poetica">
+    <Author>horace</Author>
+    <Display>Ars Poetica</Display>
+    <Abbr>hor. a.p.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>C. Smart, The Works of Horace. Philadelphia: Joseph Whetham, 1836.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0064</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0893.phi006.perseus-lat1</URI>
+  <PubDate cert="1">-15</PubDate></TessDocument>
+  <TessDocument id="horace.carmen_saeculare">
+    <Author>horace</Author>
+    <Display>Carmen Saeculare</Display>
+    <Abbr>hor. c.s.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Paul Shorey, Horace: Odes and Epodes. Boston: Benj. H. Sanborn &amp; Co.</PrintSource>
+    <DigitalSourceDisplay>Latin Library</DigitalSourceDisplay>
+    <DigitalSourceURL>http://thelatinlibrary.com</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="1">-15</PubDate></TessDocument>
+  <TessDocument id="horace.epistles">
+    <Author>horace</Author>
+    <Display>Epistles</Display>
+    <Abbr>hor. ep.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>H. Rushton Fairclough, Horace: Satires, Epistles and Ars Poetica. Harvard University Press, 1929.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0539</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0893.phi005.perseus-lat1</URI>
+  <PubDate cert="1">-21</PubDate></TessDocument>
+  <TessDocument id="horace.epodes">
+    <Author>horace</Author>
+    <Display>Epodes</Display>
+    <Abbr>hor. epod.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>F. Vollmer, Q. Horati Flacci Carmina. Leipzig: Teubner, 1912.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0538</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0893.phi003.perseus-lat1</URI>
+  <PubDate cert="1">-30</PubDate></TessDocument>
+  <TessDocument id="horace.odes">
+    <Author>horace</Author>
+    <Display>Odes</Display>
+    <Abbr>hor. od.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Paul Shorey and Gordon J. Laing, Horace: Odes and Epodes. Chicago: Benj. H. Sanborn &amp; Co., 1919.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0024</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0893.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-31</PubDate></TessDocument>
+  <TessDocument id="horace.satires">
+    <Author>horace</Author>
+    <Display>Satires</Display>
+    <Abbr>hor. s.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>C. Smart, The Works of Horace. Philadelphia: Joseph Whetham, 1836.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0062</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0893.phi004.perseus-lat1</URI>
+  <PubDate cert="1">-30</PubDate></TessDocument>
+  <TessDocument id="italicus.ilias_latina">
+    <Author>italicus</Author>
+    <Display>Ilias Latina</Display>
+    <Abbr>il. lat.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  </TessDocument>
+  <TessDocument id="juvenal.satires">
+    <Author>juvenal</Author>
+    <Display>Satires</Display>
+    <Abbr>juv.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>G. G. Ramsay, Juvenal and Persius: With An English Translation New York: G. P. Putnam’s Sons, 1918.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0093</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi1276.phi001.perseus-lat1</URI>
+  <PubDate cert="0">199</PubDate></TessDocument>
+  <TessDocument id="juvencus.historia_evangelica">
+    <Author>juvencus</Author>
+    <Display>Historia Evangelica</Display>
+    <Abbr>juvenc. hist. ev.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  <PubDate cert="0">330</PubDate></TessDocument>
+  <TessDocument id="lucan.bellum_civile">
+    <Author>lucan</Author>
+    <Display>Pharsalia</Display>
+    <Abbr>luc.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Carolus Hermannus Weise, M. Annaei Lucani Pharsaliae Libri X, (Leipzig: G. Bassus 1835)</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="0">63</PubDate></TessDocument>
+  <TessDocument id="lucretius.de_rerum_natura">
+    <Author>lucretius</Author>
+    <Display>De Rerum Natura</Display>
+    <Abbr>lucr.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>uncredited</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0130</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0550.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-55</PubDate></TessDocument>
+  <TessDocument id="manilius.astronomicon">
+    <Author>manilius</Author>
+    <Display>Astronomicon</Display>
+    <Abbr>man. astr.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  <PubDate cert="0">99</PubDate></TessDocument>
+  <TessDocument id="martial.epigrams">
+    <Author>martial</Author>
+    <Display>Epigrams</Display>
+    <Abbr>mart.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Wilhelm Heraeus, M. Valerii Martialis Epigrammaton libri. Leipzig: Borovskij, 1925.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0506</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi1294.phi002.perseus-lat1</URI>
+  <PubDate cert="0">80</PubDate></TessDocument>
+  <TessDocument id="ovid.amores">
+    <Author>ovid</Author>
+    <Display>Amores</Display>
+    <Abbr>ov. am.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>R. Ehwald, Amores, Epistulae, Medicamina faciei femineae, Ars amatoria, Remedia amoris (Teubner 1907)</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="1">-16</PubDate></TessDocument>
+  <TessDocument id="ovid.ars_amatoria">
+    <Author>ovid</Author>
+    <Display>Ars Amatoria</Display>
+    <Abbr>ov. ars am.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>R. Ehwald, Amores, Epistulae, Medicamina faciei femineae, Ars amatoria, Remedia amoris (Teubner 1907)</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="1">-1</PubDate></TessDocument>
+  <TessDocument id="ovid.ex_ponto">
+    <Author>ovid</Author>
+    <Display>Ex Ponto</Display>
+    <Abbr>ov. pont.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Arthur Leslie Wheeler, P. Ovidius Naso: Ex Ponto. Cambridge, MA: Harvard University Press, 1939.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0493</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0959.phi009.perseus-lat1</URI>
+  <PubDate cert="0">13</PubDate></TessDocument>
+  <TessDocument id="ovid.fasti">
+    <Author>ovid</Author>
+    <Display>Fasti</Display>
+    <Abbr>ov. fast.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Sir James George Frazer, Ovid’s Fasti. Harvard University Press, 1933.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0547</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0959.phi007.perseus-lat1</URI>
+  <PubDate cert="0">8</PubDate></TessDocument>
+  <TessDocument id="ovid.heroides">
+    <Author>ovid</Author>
+    <Display>Heroides</Display>
+    <Abbr>ov. her.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>R. Ehwald, Amores, Epistulae, Medicamina faciei femineae, Ars amatoria, Remedia amoris. Teubner, 1907.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0068%3atext%3dEp.</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0959.phi002.perseus-lat1</URI>
+  <PubDate cert="1">-2</PubDate></TessDocument>
+  <TessDocument id="ovid.ibis">
+    <Author>ovid</Author>
+    <Display>Ibis</Display>
+    <Abbr>ov. ib.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>P. Ovidius Naso. P. Ovidius Naso ex Iterata R. Merkelii Recognitione, Vol III. Rudolf Merkel. Rudolf Ehwald. Lipsiae. In Aedibus B.G. Teubneri. 1889. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0548</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:phi0959.phi010.perseus-lat1</URI>
+  </TessDocument>
+  <TessDocument id="ovid.medicamina_faciei_femineae">
+    <Author>ovid</Author>
+    <Display>Medicamina Faciei Femineae</Display>
+    <Abbr>ov. medic.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>R. Ehwald, Amores, Epistulae, Medicamina faciei femineae, Ars amatoria, Remedia amoris. Teubner, 1907.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="1">-2</PubDate></TessDocument>
+  <TessDocument id="ovid.metamorphoses">
+    <Author>ovid</Author>
+    <Display>Metamorphoses</Display>
+    <Abbr>ov. met.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Hugo Magnus, Ovid: Metamorphoses. Gotha (Germany): Friedr. Andr. Perthes, 1892.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0029</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0959.phi006.perseus-lat1</URI>
+  <PubDate cert="0">8</PubDate></TessDocument>
+  <TessDocument id="ovid.remedia_amoris">
+    <Author>ovid</Author>
+    <Display>Remedia Amoris</Display>
+    <Abbr>ov. red. am.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>R. Ehwald, Amores, Epistulae, Medicamina faciei femineae, Ars amatoria, Remedia amoris. Teubner, 1907.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0068%3atext%3dRem.</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="0">2</PubDate></TessDocument>
+  <TessDocument id="ovid.tristia">
+    <Author>ovid</Author>
+    <Display>Tristia</Display>
+    <Abbr>ov. tr.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Arthur Leslie Wheeler, P. Ovidius Naso: Tristia. Cambridge, MA: Harvard University Press, 1939.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0492</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0959.phi008.perseus-lat1</URI>
+  <PubDate cert="0">12</PubDate></TessDocument>
+  <TessDocument id="paulus_diaconus.carmina">
+    <Author>paulus_diaconus</Author>
+    <Display>Carmina</Display>
+    <Abbr>paul c.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  </TessDocument>
+  <TessDocument id="persius.satires">
+    <Author>persius</Author>
+    <Display>Satires</Display>
+    <Abbr>pers. sat.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>G.G.Ramsay, Juvenal and Persius with An English Translation. London: William Heinemann; G. P. Putnam's Son, 1918.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0497</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0969.phi001.perseus-lat1</URI>
+  <PubDate cert="0">62</PubDate></TessDocument>
+  <TessDocument id="plautus.amphitruo">
+    <Author>plautus</Author>
+    <Display>Amphitruo</Display>
+    <Abbr>pl. am.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0030</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.asinaria">
+    <Author>plautus</Author>
+    <Display>Asinaria</Display>
+    <Abbr>pl. as.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0031</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi002.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.aulularia">
+    <Author>plautus</Author>
+    <Display>Aulularia</Display>
+    <Abbr>pl. aul.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0032</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi003.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.bacchides">
+    <Author>plautus</Author>
+    <Display>Bacchides</Display>
+    <Abbr>pl. bacch.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0033</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi004.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.captivi">
+    <Author>plautus</Author>
+    <Display>Captivi</Display>
+    <Abbr>pl. capt.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0034</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi005.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.casina">
+    <Author>plautus</Author>
+    <Display>Casina</Display>
+    <Abbr>pl. cas.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0035</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi006.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.cistellaria">
+    <Author>plautus</Author>
+    <Display>Cistellaria</Display>
+    <Abbr>pl. cist.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0036</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi007.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.curculio">
+    <Author>plautus</Author>
+    <Display>Curculio</Display>
+    <Abbr>pl. curc.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0037</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi008.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.epidicus">
+    <Author>plautus</Author>
+    <Display>Epidicus</Display>
+    <Abbr>pl. ep.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0038</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi009.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.menaechmi">
+    <Author>plautus</Author>
+    <Display>Menaechmi</Display>
+    <Abbr>pl. men.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0039</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi010.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.mercator">
+    <Author>plautus</Author>
+    <Display>Mercator</Display>
+    <Abbr>pl. merc.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0040</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi011.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.miles_gloriosus">
+    <Author>plautus</Author>
+    <Display>Miles Gloriosus</Display>
+    <Abbr>pl. mil.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0041</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi012.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.mostellaria">
+    <Author>plautus</Author>
+    <Display>Mostellaria</Display>
+    <Abbr>pl. most.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0042</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi013.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.persa">
+    <Author>plautus</Author>
+    <Display>Persa</Display>
+    <Abbr>pl. pers.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0043</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi014.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.poenulus">
+    <Author>plautus</Author>
+    <Display>Poenulus</Display>
+    <Abbr>pl. poen.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0044</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi015.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.pseudolus">
+    <Author>plautus</Author>
+    <Display>Pseudolus</Display>
+    <Abbr>pl. ps.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0045</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:phi0119.phi016.perseus-lat1</URI>
+  <PubDate cert="1">-191</PubDate></TessDocument>
+  <TessDocument id="plautus.rudens">
+    <Author>plautus</Author>
+    <Display>Rudens</Display>
+    <Abbr>pl. rud.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0046</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi017.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.stichus">
+    <Author>plautus</Author>
+    <Display>Stichus</Display>
+    <Abbr>pl. stich.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0047</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi018.perseus-lat1</URI>
+  <PubDate cert="1">-200</PubDate></TessDocument>
+  <TessDocument id="plautus.trinummus">
+    <Author>plautus</Author>
+    <Display>Trinummus</Display>
+    <Abbr>pl. trin.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0048</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi019.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="plautus.truculentus">
+    <Author>plautus</Author>
+    <Display>Truculentus</Display>
+    <Abbr>pl. truc.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>T. Maccius Plautus. Plauti Comoediae. F. Leo. Berlin. Weidmann. 1895.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0049</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0119.phi020.perseus-lat1</URI>
+  <PubDate cert="1">-184</PubDate></TessDocument>
+  <TessDocument id="propertius.elegies">
+    <Author>propertius</Author>
+    <Display>Elegies</Display>
+    <Abbr>prop.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Mueller, Sex. Propertii Elegiae. Leipzig: Teubner, 1898.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0494</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0620.phi001.perseus-lat2</URI>
+  <PubDate cert="1">-28</PubDate></TessDocument>
+  <TessDocument id="prudentius.apotheosis">
+    <Author>prudentius</Author>
+    <Display>Apotheosis</Display>
+    <Abbr>prud. apo.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Prudentius. Prudentius, Vol 1. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1949. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0555</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0238.stoa005.perseus-lat1</URI>
+  <PubDate cert="0">405</PubDate></TessDocument>
+  <TessDocument id="prudentius.contra_symmachum">
+    <Author>prudentius</Author>
+    <Display>Contra Symmachum</Display>
+    <Abbr>prud. sym.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Prudentius. Prudentius, Vol 1-2. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1949-1953. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0558</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0238.stoa007.perseus-lat1</URI>
+  <PubDate cert="0">405</PubDate></TessDocument>
+  <TessDocument id="prudentius.dittochaeon">
+    <Author>prudentius</Author>
+    <Display>Dittochaeon</Display>
+    <Abbr>prud. ditto.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Prudentius. Prudentius, Vol 2. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1953. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0560</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0238.stoa008.perseus-lat1</URI>
+  <PubDate cert="0">405</PubDate></TessDocument>
+  <TessDocument id="prudentius.epilogus">
+    <Author>prudentius</Author>
+    <Display>Epilogus</Display>
+    <Abbr>prud. epil.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Prudentius. Prudentius, Vol 2. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1953. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0561</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0238.stoa009.perseus-lat1</URI>
+  <PubDate cert="0">405</PubDate></TessDocument>
+  <TessDocument id="prudentius.hamartigenia">
+    <Author>prudentius</Author>
+    <Display>Hamartigenia</Display>
+    <Abbr>prud. ham.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Prudentius. Prudentius, Vol 1. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1949. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0556</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0238.stoa006.perseus-lat1</URI>
+  <PubDate cert="0">405</PubDate></TessDocument>
+  <TessDocument id="prudentius.psychomachia">
+    <Author>prudentius</Author>
+    <Display>Psychomachia</Display>
+    <Abbr>prud. psych.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Prudentius. Prudentius, Vol 1. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1949. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0557</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:stoa0238.stoa002.perseus-lat1</URI>
+  <PubDate cert="0">405</PubDate></TessDocument>
+  <TessDocument id="rutilius.de_reditu">
+    <Author>rutilius</Author>
+    <Display>De Reditu</Display>
+    <Abbr>rutil. de red.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource/>
+    <DigitalSourceDisplay/>
+    <DigitalSourceURL/>
+    <AddedBy/>
+    <URI/>
+  <PubDate cert="0"/></TessDocument>
+  <TessDocument id="seneca.agamemnon">
+    <Author>seneca</Author>
+    <Display>Agamemnon</Display>
+    <Abbr>sen. ag.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0002</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi007.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.hercules_furens">
+    <Author>seneca</Author>
+    <Display>Hercules Furens</Display>
+    <Abbr>sen. her. f.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0003</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi001.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.hercules_oetaeus">
+    <Author>seneca</Author>
+    <Display>Hercules Oetaeus</Display>
+    <Abbr>sen. her. o.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0004</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi009.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.medea">
+    <Author>seneca</Author>
+    <Display>Medea</Display>
+    <Abbr>sen. med.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0005</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi004.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.octavia">
+    <Author>seneca</Author>
+    <Display>Octavia</Display>
+    <Abbr>sen. oct.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0006</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi010.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.oedipus">
+    <Author>seneca</Author>
+    <Display>Oedipus</Display>
+    <Abbr>sen. oed.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0007</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi006.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.phaedra">
+    <Author>seneca</Author>
+    <Display>Phaedra</Display>
+    <Abbr>sen. phaed.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0008</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi005.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.phoenissae">
+    <Author>seneca</Author>
+    <Display>Phoenissae</Display>
+    <Abbr>sen. phoen.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0009</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi003.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.thyestes">
+    <Author>seneca</Author>
+    <Display>Thyestes</Display>
+    <Abbr>sen. thy.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0010</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi008.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="seneca.troades">
+    <Author>seneca</Author>
+    <Display>Troades</Display>
+    <Abbr>sen. tro.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>L. Annaeus Seneca. Tragoediae. Rudolf Peiper. Gustav Richter. Leipzig. Teubner. 1921.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0011</DigitalSourceURL>
+    <AddedBy>Katherine Roache</AddedBy>
+    <URI>urn:cts:latinLit:phi1017.phi002.perseus-lat1</URI>
+  <PubDate cert="0">53</PubDate></TessDocument>
+  <TessDocument id="silius_italicus.punica">
+    <Author>silius_italicus</Author>
+    <Display>Punica</Display>
+    <Abbr>sil.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Silius Italicus. Corpus Poetarum Latinorum, Vol 2. Walter Coventry Summers. John Percival Postgate. London. Sumptibus G. Bell et Filiorum. 1905. Keyboarding.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0674</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:phi1345.phi001.perseus-lat1</URI>
+  <PubDate cert="0">102</PubDate></TessDocument>
+  <TessDocument id="statius.achilleid">
+    <Author>statius</Author>
+    <Display>Achilleid</Display>
+    <Abbr>stat. ach.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>John Henry Mozley, Statius: Vol II. New York: G.P. Putnam’s Sons. 1928.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0500</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi1020.phi003.perseus-lat1</URI>
+  <PubDate cert="0">96</PubDate></TessDocument>
+  <TessDocument id="statius.silvae">
+    <Author>statius</Author>
+    <Display>Silvae</Display>
+    <Abbr>stat. silv.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>John Henry Mozley, Statius: Vol I. New York: G.P. Putnam’s Sons. 1928.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0499</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi1020.phi002.perseus-lat1</URI>
+  <PubDate cert="0">94</PubDate></TessDocument>
+  <TessDocument id="statius.thebaid">
+    <Author>statius</Author>
+    <Display>Thebaid</Display>
+    <Abbr>stat. theb.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>John Henry Mozley, Statius: Vol I–II. New York: G.P. Putnam’s Sons. 1928.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0498</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi1020.phi001.perseus-lat1</URI>
+  <PubDate cert="0">92</PubDate></TessDocument>
+  <TessDocument id="terence.adelphi">
+    <Author>terence</Author>
+    <Display>Adelphi</Display>
+    <Abbr>ter. ad.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edward St. John Parry, Publii Terentii Comoediae VI. London: Whitaker and Co., Ave Maria Lane;  George Bell, Fleet Street, 1857.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0086</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0134.phi006.perseus-lat1</URI>
+  <PubDate cert="1">-160</PubDate></TessDocument>
+  <TessDocument id="terence.andria">
+    <Author>terence</Author>
+    <Display>Andria</Display>
+    <Abbr>ter. and.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edward St. John Parry, Publii Terentii Comoediae VI. London: Whitaker and Co., Ave Maria Lane;  George Bell, Fleet Street, 1857.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0087</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0134.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-166</PubDate></TessDocument>
+  <TessDocument id="terence.eunuchus">
+    <Author>terence</Author>
+    <Display>Eunuchus</Display>
+    <Abbr>ter. eun.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edward St. John Parry, Publii Terentii Comoediae VI. London: Whitaker and Co., Ave Maria Lane;  George Bell, Fleet Street, 1857.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0088</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0134.phi003.perseus-lat1</URI>
+  <PubDate cert="1">-161</PubDate></TessDocument>
+  <TessDocument id="terence.heautontimorumenos">
+    <Author>terence</Author>
+    <Display>Heautontimorumenos</Display>
+    <Abbr>ter. heaut.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edward St. John Parry, Publii Terentii Comoediae VI. London: Whitaker and Co., Ave Maria Lane; George Bell, FleetStreet, 1857.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0089</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0134.phi002.perseus-lat1</URI>
+  <PubDate cert="1">-163</PubDate></TessDocument>
+  <TessDocument id="terence.hecyra">
+    <Author>terence</Author>
+    <Display>Hecyra</Display>
+    <Abbr>ter. hec.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edward St. John Parry, Publii Terentii Comoediae VI. London: Whitaker and Co., Ave Maria Lane;  George Bell, Fleet Street, 1857.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0090</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0134.phi005.perseus-lat1</URI>
+  <PubDate cert="1">-165</PubDate></TessDocument>
+  <TessDocument id="terence.phormio">
+    <Author>terence</Author>
+    <Display>Phormio</Display>
+    <Abbr>ter. phor.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>Edward St. John Parry, Publii Terentii Comoediae VI. London: Whitaker and Co., Ave Maria Lane;  George Bell, Fleet Street, 1857.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0091</DigitalSourceURL>
+    <AddedBy>Anna Glenn</AddedBy>
+    <URI>urn:cts:latinLit:phi0134.phi004.perseus-lat1</URI>
+  <PubDate cert="1">-161</PubDate></TessDocument>
+  <TessDocument id="tibullus.elegies">
+    <Author>tibullus</Author>
+    <Display>Carmina</Display>
+    <Abbr>tib.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>J.P. Postgate, Tibulli aliorumque Carminum libri Tres. Oxford University Press, 1915.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0507</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0660.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-19</PubDate></TessDocument>
+  <TessDocument id="valerius_flaccus.argonautica">
+    <Author>valerius_flaccus</Author>
+    <Display>Argonautica</Display>
+    <Abbr>valerius flaccus</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>C. Valerius Flaccus. Otto Kramer. C. Valeri Flacci Setini Balbi Argonauticon Libri Octo. Leipzig. Teubner. 1913.</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0058</DigitalSourceURL>
+    <AddedBy/>
+    <URI>urn:cts:latinLit:phi1035.phi001.perseus-lat1</URI>
+  </TessDocument>
+  <TessDocument id="vergil.aeneid">
+    <Author>vergil</Author>
+    <Display>Aeneid</Display>
+    <Abbr>verg. aen.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>J. B. Greenough, Bucolics, Aeneid, and Georgics Of Vergil. Boston: Ginn &amp; Co. 1900</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI/>
+  <PubDate cert="1">-19</PubDate></TessDocument>
+  <TessDocument id="vergil.eclogues">
+    <Author>vergil</Author>
+    <Display>Eclogues</Display>
+    <Abbr>verg. ecl.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>J. B. Greenough, Bucolics, Aeneid, and Georgics Of Vergil. Boston: Ginn &amp; Co. 1900</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0056</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0690.phi001.perseus-lat1</URI>
+  <PubDate cert="1">-39</PubDate></TessDocument>
+  <TessDocument id="vergil.georgics">
+    <Author>vergil</Author>
+    <Display>Georgics</Display>
+    <Abbr>verg. g.</Abbr>
+    <Lang>la</Lang>
+    <Prose>0</Prose>
+    <PrintSource>J. B. Greenough, Bucolics, Aeneid, and Georgics Of Vergil. Boston: Ginn &amp; Co. 1900</PrintSource>
+    <DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
+    <DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0059</DigitalSourceURL>
+    <AddedBy>Chris Forstall</AddedBy>
+    <URI>urn:cts:latinLit:phi0690.phi002.perseus-lat1</URI>
+  <PubDate cert="1">-29</PubDate></TessDocument>
+</Corpus>
