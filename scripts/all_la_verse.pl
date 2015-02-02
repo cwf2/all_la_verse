@@ -4,114 +4,97 @@ use warnings;
 use File::Path qw/make_path remove_tree/;
 use Parallel::ForkManager;
 use XML::LibXML;
+use Getopt::Long;
 
-use lib "/vagrant/tesserae/TessPerl";
+use lib "/vagrant/tesserae/scripts/TessPerl";
 use Tesserae;
 
-my %corpus = %{load_corpus()};
-   
+my $continue = 0;
+my $file_runs = "/vagrant/metadata/index_run.txt";
+my $file_texts = "/vagrant/metadata/index_text.txt";
+my $dir_sessions = "/vagrant/working/sessions";
+my $parallel = 2;
+my $shuffle = 1;
+
 my %arg = (
    "--unit" => "phrase",
    "--feature" => "stem",
    "--stop" => "10",
-   "--stbasis" => "corpus",
+   "--stbasis" => "both",
    "--score" => "stem",
-   "--dist" => "999",
+   "--dist" => "5",
    "--dibasis" => "freq",
    "--cutoff" => "7"
 );
 
+GetOptions(
+  "continue" => \$continue,
+  "texts" => \$file_texts,
+  "runs" => \$file_runs,
+  "working" => \$dir_sessions,
+  "parallel=i" => \$parallel,
+  "shuffle!" => \$shuffle
+);
+
+
+my @corpus = @{load_corpus($file_texts)};
+
 # create/clean output directories
 
-my $output_temp = "/home/vagrant/batch-working";
-my $output_html = "/vagrant/claudian/html";
-my $output_text = "/vagrant/claudian/tsv";
-
-remove_tree($output_temp);
-remove_tree($output_html);
-remove_tree($output_text);
-make_path($output_temp);
-make_path($output_html);
-make_path($output_text);
+unless ($continue) {
+   remove_tree($dir_sessions);
+   make_path($dir_sessions);
+}
 
 # organize all runs in a list to facilitate parallelization
 
-my @run = @{calc_runs($#files)};
-my $ndigit = length(scalar(@run));
+my $ref_run = $continue ? load_runs($file_runs) : calc_runs($#corpus);
+$ref_run = shuffle_runs($ref_run) if $shuffle;
+my $ndigit = ndigit($ref_run);
+write_index($file_runs, $ref_run, $ndigit) unless $continue;
 
 #
 # main loop
 #
 
-my $pm = Parallel::ForkManager->new(2);
+my $pm;
+if ($parallel) {
+   $pm = Parallel::ForkManager->new($parallel);
+}
 
-for (my $i = 0; $i <= $#run; $i++) {
+my @run = @$ref_run;
+
+for my $i (0..$#run) {
    # fork
    
-   $pm->start and next;
+   if ($parallel) {
+      $pm->start and next;
+   }
    
    # params for this run
-   
-   my $source = $files[$run[$i]->[0]]{id};
-   my $target = $files[$run[$i]->[1]]{id};
-   
-   my $name = sprintf("%0${ndigit}d.%s_vs_%s",
-         $i,
-         $files[$run[$i]->[1]]{nick},
-         $files[$run[$i]->[0]]{nick}
-   );
-   
+
+   my $source = $corpus[$run[$i]->{source}]{label};
+   my $target = $corpus[$run[$i]->{target}]{label};
+
+   my $name = sprintf("%0${ndigit}d", $run[$i]{id});
+
    # run tesserae search
-   
+
    my $cmd = join(" ",
-      "/home/vagrant/tesserae/cgi-bin/read_table.pl",
+      "/vagrant/tesserae/cgi-bin/read_table.pl",
       "--source" => $source,
       "--target" => $target,
       %arg,
-      "--bin" => "$output_temp/$name",
+      "--bin" => "$dir_sessions/$name",
       "--quiet"
    );
-   
-   print STDERR sprintf("[%d/%d] %s\n", $i+1, scalar(@run), $cmd);
-   `$cmd`;
-   
-   # export tab-separated results
-   
-   $cmd = join(" ",
-      "/home/vagrant/tesserae/cgi-bin/read_bin.pl",
-      "--export" => "tab",
-      "--sort" => "target",
-      "--decimal" => "1",
-      "--quiet",
-      "$output_temp/$name",
-      ">",
-      "$output_text/$name.txt"
-   );
-   
+
    print STDERR sprintf("[%d/%d] %s\n", $i+1, scalar(@run), $cmd);
    `$cmd`;
 
-   # export html results
-
-   $cmd = join(" ",
-      "/home/vagrant/tesserae/cgi-bin/read_bin.pl",
-      "--export" => "html",
-      "--sort" => "target",
-      "--batch" => "10000",
-      "--decimal" => "1",
-      "--quiet",
-      "$output_temp/$name",
-      "2>/dev/null",
-      ">",
-      "$output_html/$name.html"
-   );
-   
-   print STDERR sprintf("[%d/%d] %s\n", $i+1, scalar(@run), $cmd);
-   `$cmd`;
-
-   $pm->finish;
+   $pm->finish if $parallel;
 }
-$pm->wait_all_children;
+$pm->wait_all_children if $parallel;
 
 
 #
@@ -119,8 +102,33 @@ $pm->wait_all_children;
 #
 
 sub load_corpus {
-   my $file_text = "/vagrant/metadata/authors.xml";
-   my $file_auth = "/vagrant/metadata/texts.xml";
+   my $file = shift;
+
+   my @corpus;
+
+   open (my $fh, "<:utf8", $file) or die "Can't read $file: $!";
+   
+   my %col = eval {
+      my $head = <$fh>;
+      chomp $head;
+      my @col_name = split(/\t/, $head);
+      
+      map {$col_name[$_] => $_} (0..$#col_name);
+   };
+   
+   while (my $line = <$fh>) {
+      chomp $line;
+      my @field = split(/\t/, $line);
+      
+      my $id = $field[$col{id}];
+      
+      for (qw/label auth date/) {
+         $corpus[$field[$col{id}]]{$_} = $field[$col{$_}];
+      }
+   }
+   close($fh);
+   
+   return \@corpus;
 }
 
 sub calc_runs {
@@ -130,9 +138,82 @@ sub calc_runs {
    
    for (my $t = 1; $t <= $n; $t++) {
       for (my $s = 0; $s < $t; $s++) {
-         push @run, [$s, $t];
+         push @run, {
+            id => scalar(@run),
+            source => $s,
+            target => $t
+         };
       }
    }
    
    return \@run;
+}
+
+sub load_runs {
+   my $file = shift;
+   
+   my @run;
+   
+   print STDERR "Continuing run list from $file\n";
+   
+   open (my $fh, "<:utf8", $file) or die "Can't read $file: $!";
+   <$fh>;
+   while (my $line = <$fh>) {
+      chomp $line;
+      
+      my @field = split(/\t/, $line);
+      push @run, {
+         id => $field[0],
+         source => $field[1],
+         target => $field[2]
+      };
+   }
+   close ($fh);
+   
+   @run = grep {! -d "$dir_sessions/$_->{id}"} @run;
+   
+   return \@run;
+}
+
+sub shuffle_runs {
+   my $ref = shift;
+   
+   print "Shuffling run order\n";
+   
+   my @run = @$ref;
+   
+   @run = sort {rand() <=> rand()} @run;
+   
+   return \@run;
+}
+
+sub write_index {
+   my ($file, $ref_run, $ndigit) = @_;
+
+   print STDERR "Writing $file\n";
+   
+   open (my $fh, ">:utf8", $file) or die "Can't write $file: $!";
+   
+   print $fh join("\t", qw/id source target/) . "\n";
+   
+   for my $i (0..$#run) {
+      print $fh sprintf("%0${ndigit}i\t%i\t%i\n", $run[$i]->{id}, $run[$i]{source}, $run[$i]{target});
+   }
+   
+   close ($fh);
+}
+
+sub ndigit {
+   my $ref = shift;
+   my @run = @$ref;
+   
+   my $max = 0;
+   
+   for (@run) {
+      if ($_->{id} > $max) {
+         $max = $_->{id};
+      }
+   }
+   
+   return length($max);
 }

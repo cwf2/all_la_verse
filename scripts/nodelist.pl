@@ -17,13 +17,14 @@ my @texts = sort {$meta{$a}->{date} <=> $meta{$b}->{date}} sort keys %meta;
 
 my @fields = qw/auth date tokens stems lines phrases ttr_w ttr_s/;
 
-print join("\t", "id", @fields) . "\n";
+print join("\t", "id", "label", @fields) . "\n";
 
-for my $text_id (@texts) {
+for my $i (0..$#texts) {
+   my $text_id = $texts[$i];
    my %m = %{$meta{$text_id}};
    my @row = map {$_ or "NA"} @m{@fields};
    
-   print join("\t", $text_id, @row);
+   print join("\t", $i, $text_id, @row);
    print "\n";
 }
 
@@ -87,8 +88,10 @@ sub load_tess {
    print STDERR "Extracting Tesserae data\n";
    
    my %meta = %$ref;
+   
+   my $pm = ProgressBar->new(scalar(keys %meta));
       
-   for my $text_id (keys %meta) {      
+   for my $text_id (keys %meta) {
       my $base = catfile($fs{data}, "v3", "la", $text_id, $text_id);
 
       my ($tokens, $ttr_w) = wc($base . ".freq_stop_word");
@@ -105,6 +108,8 @@ sub load_tess {
         ttr_w => $ttr_w,
         ttr_s => $ttr_s 
       };
+      
+      $pm->advance;
    }
    
    return \%meta;
