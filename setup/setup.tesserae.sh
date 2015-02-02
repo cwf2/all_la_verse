@@ -2,7 +2,11 @@
 
 set -x
 
-cd /vagrant/tesserae
+TESSROOT=/home/vagrant/tesserae
+
+git clone https://github.com/cwf2/tesserae $TESSROOT
+
+cd $TESSROOT
 
 perl scripts/configure.pl
 perl scripts/install.pl

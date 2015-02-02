@@ -5,28 +5,36 @@ use XML::LibXML;
 use File::Spec::Functions;
 use Storable;
 
-use lib "/vagrant/tesserae/scripts/TessPerl";
+use lib "/home/vagrant/tesserae/scripts/TessPerl";
 use Tesserae;
 use EasyProgressBar;
 
-my $ref_auth_date = load_auth("/vagrant/metadata/authors.xml");
-my $ref_meta = load_text("/vagrant/metadata/texts.xml", $ref_auth_date);
+my $file_auth = "/vagrant/metadata/authors.xml";
+my $file_text = "/vagrant/metadata/texts.xml";
+my $file_out = "/vagrant/metadata/index_text.txt";
+
+my $ref_auth_date = load_auth($file_auth);
+my $ref_meta = load_text($file_text, $ref_auth_date);
 my %meta = %{load_tess($ref_meta)};
 
 my @texts = sort {$meta{$a}->{date} <=> $meta{$b}->{date}} sort keys %meta;
 
+open (my $fh, ">:utf8", $file_out) or die "Can't write $file_out: $!";
+
 my @fields = qw/auth date tokens stems lines phrases ttr_w ttr_s/;
 
-print join("\t", "id", "label", @fields) . "\n";
+print $fh join("\t", "id", "label", @fields) . "\n";
 
 for my $i (0..$#texts) {
    my $text_id = $texts[$i];
    my %m = %{$meta{$text_id}};
    my @row = map {$_ or "NA"} @m{@fields};
    
-   print join("\t", $i, $text_id, @row);
-   print "\n";
+   print $fh join("\t", $i, $text_id, @row);
+   print $fh "\n";
 }
+
+close($fh);
 
 #
 # subroutines

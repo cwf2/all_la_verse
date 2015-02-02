@@ -1,12 +1,10 @@
-setwd("~/Git/all_la_verse")
-
 nodes <- read.table(file.path("metadata", "index_text.txt"), header=T, row.names=1)
 edges <- read.table(file.path("metadata", "index_run.txt"), 
                     colClasses=c("character", "integer", "integer"), 
                     header=T, row.names=1)
 
-niko <- Vectorize(function(id, cutoff=8) {
-  file_scores <- file.path("working", "scores", paste(id, "txt", sep="."))
+nikolaev <- Vectorize(function(id, cutoff=8) {
+  file_scores <- file.path("scores_phrase", paste(id, "txt", sep="."))
   
   scores <- scan(file_scores, sep="\n", quiet=T)
   return(sum(scores>cutoff))
@@ -14,7 +12,7 @@ niko <- Vectorize(function(id, cutoff=8) {
 
 
 edges <- cbind(edges, 
-   score=niko(row.names(edges)),
+   score=nikolaev(row.names(edges)),
    tok=as.numeric(nodes[as.character(edges$source), "tokens"]) *
      as.numeric(nodes[as.character(edges$target), "tokens"]),
    label=paste(sep="~",
@@ -22,6 +20,10 @@ edges <- cbind(edges,
      nodes[as.character(edges$target), "label"]
    )
 )
+edges <- cbind(edges,
+  nscore = round(10^8 * edges$score/edges$tok, digits=2)
+)
+edges <- edges[order(edges$nscore, decreasing=T),]
 
 feat <- data.frame(
   tok_s=as.numeric(nodes[as.character(edges$source), "tokens"]),
@@ -37,4 +39,24 @@ feat <- data.frame(
   tts_s=nodes[as.character(edges$source), "ttr_s"],
   tts_t=nodes[as.character(edges$target), "ttr_s"],
   row.names=row.names(edges)
+)
+
+write.table(file="nodes.csv",
+  x=data.frame(
+    id=as.integer(row.names(nodes)),
+    nodes[,c("label", "auth", "date", "tokens", "phrases", "lines")]),
+  sep=",",
+  row.names=F
+)
+
+write.table(file="edges.csv",
+  x=data.frame(
+    id=as.integer(row.names(edges)),
+    source=edges$source,
+    target=edges$target,
+    label=edges$label,
+    weight=edges$nscore
+  ),
+  sep=",",
+  row.names=F
 )

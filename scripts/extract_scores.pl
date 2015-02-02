@@ -5,15 +5,15 @@ use File::Path qw/make_path remove_tree/;
 use Storable;
 use Getopt::Long;
 
-use lib "/vagrant/tesserae/scripts/TessPerl";
+use lib "/home/vagrant/tesserae/scripts/TessPerl";
 use Tesserae;
 use EasyProgressBar;
 
 my $continue = 0;
 my $dec = 1;
 my $sep = "\n";
-my $dir_in = "/vagrant/working/sessions";
-my $dir_out = "/vagrant/working/scores";
+my $dir_in = "/home/vagrant/working";
+my $dir_out = "/vagrant/scores";
 
 GetOptions(
    "continue" => \$continue,

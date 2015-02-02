@@ -19,7 +19,8 @@ sudo apt-get install -y \
 	liblingua-stem-perl \
 	libdbd-sqlite3-perl \
 	libjson-perl        \
-	libxml-libxml-perl
+	libxml-libxml-perl  \
+   r-base-core
 
 sudo -u vagrant cp /vagrant/setup/vimrc /home/vagrant/.vimrc
 sudo -u vagrant cp /vagrant/setup/gitconfig /home/vagrant/.gitconfig

@@ -6,18 +6,19 @@ use Parallel::ForkManager;
 use XML::LibXML;
 use Getopt::Long;
 
-use lib "/vagrant/tesserae/scripts/TessPerl";
+use lib "/home/vagrant/tesserae/scripts/TessPerl";
 use Tesserae;
 
 my $continue = 0;
+my $tessroot = "/home/vagrant/tesserae";
 my $file_runs = "/vagrant/metadata/index_run.txt";
 my $file_texts = "/vagrant/metadata/index_text.txt";
-my $dir_sessions = "/vagrant/working/sessions";
+my $dir_sessions = "/home/vagrant/working";
 my $parallel = 2;
 my $shuffle = 1;
 
 my %arg = (
-   "--unit" => "phrase",
+   "--unit" => "line",
    "--feature" => "stem",
    "--stop" => "10",
    "--stbasis" => "both",
@@ -49,9 +50,9 @@ unless ($continue) {
 # organize all runs in a list to facilitate parallelization
 
 my $ref_run = $continue ? load_runs($file_runs) : calc_runs($#corpus);
-$ref_run = shuffle_runs($ref_run) if $shuffle;
 my $ndigit = ndigit($ref_run);
 write_index($file_runs, $ref_run, $ndigit) unless $continue;
+$ref_run = shuffle_runs($ref_run) if $shuffle;
 
 #
 # main loop
@@ -81,7 +82,7 @@ for my $i (0..$#run) {
    # run tesserae search
 
    my $cmd = join(" ",
-      "/vagrant/tesserae/cgi-bin/read_table.pl",
+      "$tessroot/cgi-bin/read_table.pl",
       "--source" => $source,
       "--target" => $target,
       %arg,
@@ -189,6 +190,7 @@ sub shuffle_runs {
 
 sub write_index {
    my ($file, $ref_run, $ndigit) = @_;
+   my @run = @$ref_run;
 
    print STDERR "Writing $file\n";
    
