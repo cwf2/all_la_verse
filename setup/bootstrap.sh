@@ -19,9 +19,15 @@ sudo apt-get install -y \
 	liblingua-stem-perl \
 	libdbd-sqlite3-perl \
 	libjson-perl        \
-	libxml-libxml-perl  \
-   r-base-core
+	libxml-libxml-perl
 
 sudo -u vagrant cp /vagrant/setup/vimrc /home/vagrant/.vimrc
 sudo -u vagrant cp /vagrant/setup/gitconfig /home/vagrant/.gitconfig
 
+sudo -u vagrant /vagrant/setup/setup.tesserae.sh
+
+sudo -u vagrant /vagrant/scripts/nodelist.pl
+
+sudo -u vagrant /vagrant/scripts/all_la_verse.pl
+
+sudo -u vagrant /vagrant/scripts/extract_scores.pl

@@ -11,6 +11,8 @@ cd $TESSROOT
 perl scripts/configure.pl
 perl scripts/install.pl
 
+cp scripts/.tesserae.conf /vagrant/scripts/
+
 perl scripts/v3/build-stem-cache.pl
 perl scripts/v3/patch-stem-cache.pl
 
