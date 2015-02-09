@@ -4,7 +4,7 @@ edges <- read.table(file.path("metadata", "index_run.txt"),
                     header=T, row.names=1)
 
 nikolaev <- Vectorize(function(id, cutoff=8) {
-  file_scores <- file.path("scores_phrase", paste(id, "txt", sep="."))
+  file_scores <- file.path("scores", paste(id, "txt", sep="."))
   
   scores <- scan(file_scores, sep="\n", quiet=T)
   return(sum(scores>cutoff))
