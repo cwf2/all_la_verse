@@ -21,7 +21,7 @@ This workset is arranged as follows. Here you have a Vagrant file that defines a
  
    This is the principal script of this workset, generating and then carrying out a list of Tesserae searches. It saves the list at __metadata/index_run.txt__ for future reference. Nota bene: the binary Tesserae results are saved to the home directory of the virtual machine (__/home/vagrant/working__), so they're not accessible from the host and will be erased by a subsequent ```vagrant destroy```.
    
- * __scripts/extract_scores.pl___
+ * __scripts/extract_scores.pl__
  
    This script parses the results of the searches performed by __all_la_verse.pl__. The results are saved to __/vagrant/results__ on the VM, which means they should be shared with the host (i.e. in the current directory). By default the results for each search are saved as a separate text file, consisting of just the scores for each result, to one decimal place, separated by newlines. The results for each search are named only by a serial number, use __metadata/index_run.txt__ to locate a specific search.
    
