@@ -52,7 +52,7 @@ Ancillary Scripts
 Contact / Collaboration
 -----------------------
 
-I'm excited to work together with all our partners on this. I'm really hopeful that we can find substantial common ground between Neil B's and Alex's groups, so that each benefits from the other's work and the core Tesserae code benefits from both. Email me at [mailto:cforstall@gmail.com](cforstall@gmail.com).
+I'm excited to work together with all our partners on this. I'm really hopeful that we can find substantial common ground between Neil B's and Alex's groups, so that each benefits from the other's work and the core Tesserae code benefits from both. Email me at [cforstall@gmail.com](mailto:cforstall@gmail.com).
 
 
 
