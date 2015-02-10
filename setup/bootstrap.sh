@@ -28,6 +28,6 @@ sudo -u vagrant /vagrant/setup/setup.tesserae.sh
 
 sudo -u vagrant /vagrant/scripts/nodelist.pl
 
-sudo -u vagrant /vagrant/scripts/all_la_verse.pl
+sudo -u vagrant /vagrant/scripts/all_la_verse.pl --parallel 0
 
 sudo -u vagrant /vagrant/scripts/extract_scores.pl
