@@ -38,6 +38,13 @@ The way I usually work is to have the scripts open in my editor on my own comput
 
 You can read more about how Vagrant works at its website (http://vagrantup.com).
 
+Speed and Resources
+-------------------
+
+I've turned down some of the dials on the VM by default (notwithstanding notes in the documentation of individual scripts to the contrary) just to be on the conservative side. If you have enough RAM, though, then before doing anything else I recommend editing the __Vagrantfile__ and bumping up the RAM allotted to the virtual machine (line 50), to 4GB or if possible 8GB. Then, in __setup/bootstrap.sh__ (line 31), change the *--parallel* option from 0 to 2. Do this before booting the VM. 
+
+These changes should significantly speed things up, if your hardware supports them. The idea is to let the VM run Tesserae searches simultaneously using its two cores, but it only works if it has enough RAM for those occasions where by chance two searches involving major epics (e.g. Silius Italicus _Punica_ vs. Ovid _Metamorphoses_) bump up against each other and indices for four large texts have to be in memory all at once. If you don't have enough RAM, the VM starts swapping and gets bogged down. I'm afraid I don't really understand how this works in a virtual machine, but in practice it can be significantly slower to try to run things in parallel without sufficient RAM than just to run one search at a time. Neither do I know exactly what resources your own computer needs before you can allot the VM more RAM; only that my development machine here in Geneva has 16 GB RAM and I can assign 8GB of that to the VM without experiencing any serious consequences.
+
 Ancillary Scripts
 -----------------
 
