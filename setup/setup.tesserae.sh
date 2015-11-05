@@ -2,21 +2,21 @@
 
 set -x
 
-TESSROOT=/home/vagrant/tesserae
+. /vagrant/setup/tessrc
 
-git clone https://github.com/cwf2/tesserae $TESSROOT
+git clone -b all.la.verse https://github.com/cwf2/tesserae $TESSROOT
 
-cd $TESSROOT
+perl $TESSROOT/scripts/configure.pl
+perl $TESSROOT/scripts/install.pl
 
-perl scripts/configure.pl
-perl scripts/install.pl
+cp $TESSROOT/scripts/.tesserae.conf /vagrant/scripts/
 
-cp scripts/.tesserae.conf /vagrant/scripts/
+perl $TESSROOT/scripts/build-stem-cache.pl
+perl $TESSROOT/scripts/patch-stem-cache.pl
 
-perl scripts/v3/build-stem-cache.pl
-perl scripts/v3/patch-stem-cache.pl
-
-perl scripts/v3/add_column.pl --parallel 2 texts/la/*
-perl scripts/v3/add_col_stem.pl --parallel 2 texts/la/*
-perl scripts/v3/corpus-stats.pl --feat stem la
+perl $TESSROOT/scripts/v3/add_column.pl --parallel $TESSNCORES \
+     $TESSROOT/texts/la/*.tess
+perl $TESSROOT/scripts/v3/add_col_stem.pl --parallel $TESSNCORES \
+     $TESSROOT/texts/la/*.tess
+perl $TESSROOT/scripts/v3/corpus-stats.pl --feat stem la
 

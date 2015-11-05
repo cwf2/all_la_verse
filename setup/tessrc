@@ -1,0 +1,5 @@
+export TESSROOT="/home/vagrant/tesserae"
+export TESSTMP="/home/vagrant/tesserae/tmp"
+export TESSDOMAIN="http://tesserae.org"
+export TESSNCORES=4
+

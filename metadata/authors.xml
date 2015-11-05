@@ -276,9 +276,9 @@
 		<Death Cert="0">180</Death>
 	</TessAuthor>
 	<TessAuthor id="glass">
-		<Display>Glass</Display>
-		<Birth Cert="0"/>
-		<Death Cert="0"/>
+		<Display>Francis Glass</Display>
+		<Birth Cert="1">1790</Birth>
+		<Death Cert="1">1824</Death>
 	</TessAuthor>
 	<TessAuthor id="herodotus">
 		<Display>Herodotus</Display>
@@ -316,7 +316,7 @@
 		<Death Cert="1">-338</Death>
 	</TessAuthor>
 	<TessAuthor id="italicus">
-		<Display>Italicus</Display>
+		<Display>Baebius Italicus</Display>
 		<Birth Cert="0">50</Birth>
 		<Death Cert="0">100</Death>
 	</TessAuthor>
@@ -370,10 +370,15 @@
 		<Birth Cert="0">-445</Birth>
 		<Death Cert="0">-380</Death>
 	</TessAuthor>
+	<TessAuthor id="macrobius">
+		<Display>Macrobius</Display>
+		<Birth Cert="0">385</Birth>
+		<Death Cert="0">430</Death>
+	</TessAuthor>
 	<TessAuthor id="manilius">
 		<Display>Manilius</Display>
-		<Birth Cert="0"/>
-		<Death Cert="0">80</Death>
+		<Birth Cert="0">-10</Birth>
+		<Death Cert="0">40</Death>
 	</TessAuthor>
 	<TessAuthor id="marcus_aurelius">
 		<Display>Marcus Aurelius</Display>
@@ -412,7 +417,7 @@
 	</TessAuthor>
 	<TessAuthor id="ovid">
 		<Display>Ovid</Display>
-		<Birth Cert="1">43</Birth>
+		<Birth Cert="1">-43</Birth>
 		<Death Cert="0">17</Death>
 	</TessAuthor>
 	<TessAuthor id="paulus_diaconus">
@@ -475,6 +480,11 @@
 		<Birth Cert="0">46</Birth>
 		<Death Cert="0">120</Death>
 	</TessAuthor>
+	<TessAuthor id="polignac">
+		<Display>Melchior de Polignac</Display>
+		<Birth Cert="1">1661</Birth>
+		<Death Cert="1">1741</Death>
+	</TessAuthor>
 	<TessAuthor id="polybius">
 		<Display>Polybius</Display>
 		<Birth Cert="0">-200</Birth>
@@ -491,7 +501,7 @@
 		<Death Cert="0">413</Death>
 	</TessAuthor>
 	<TessAuthor id="pseudo_cicero">
-		<Display>Pseudo Cicero</Display>
+		<Display>Pseudo-Cicero</Display>
 		<Birth Cert="0"/>
 		<Death Cert="0"/>
 	</TessAuthor>
@@ -527,8 +537,8 @@
 	</TessAuthor>
 	<TessAuthor id="scriptores_historiae_augustae">
 		<Display>Scriptores Historiae Augustae</Display>
-		<Birth Cert="0"/>
-		<Death Cert="0"/>
+		<Birth Cert="0">350</Birth>
+		<Death Cert="0">400</Death>
 	</TessAuthor>
 	<TessAuthor id="seneca">
 		<Display>Seneca</Display>

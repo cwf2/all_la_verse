@@ -183,12 +183,16 @@ my $dec = 1;
 my $sep = "\n";
 my $dir_in = "/home/vagrant/working";
 my $dir_out = "/vagrant/scores";
+my $file_texts = "/vagrant/metadata/index_text.txt";
+my $file_runs = "/vagrant/metadata/index_run.txt";
 my $help = 0;
 
 # get user options
 
 GetOptions(
    "continue" => \$continue,
+   "texts" => \$file_texts,
+   "runs" => \$file_runs,   
    "decimal=i" => \$dec,
    "seperator=s" => \$sep,
    "in" => \$dir_in,
@@ -216,7 +220,7 @@ unless ($continue) {
 #
 
 {
-   my @sessions = @{get_session_list($dir_in)};
+   my @sessions = @{get_session_list($dir_in, $file_runs, $file_texts)};
    
    print STDERR "Reading " . scalar(@sessions) . " Tesserae sessions\n";
 
@@ -237,34 +241,146 @@ unless ($continue) {
 #
 
 sub get_session_list {
-   my $dir = shift;
+   my ($dir_in, $file_runs, $file_texts) = @_;
    
    print STDERR "Getting session list\n";
    
-   opendir(my $dh, $dir) or die "Can't read session directory $dir: $!";
+   opendir(my $dh, $dir_in) or die "Can't read session directory $dir_in: $!";
    my @session = grep {/^\d+$/} readdir($dh);
    closedir($dh);
    
-   @session = sort @session;
+   my $index_ref = load_run_list($file_runs, $file_texts);
    
-   for my $i (1..$#session) {
-      my $gap = $session[$i] - $session[$i-1] - 1;
-      
-      if ($gap) {
-         my $unit = $gap > 1 ? "sessions" : "session";
-         print STDERR "Missing $gap $unit after $session[$i]\n";
-      }
-   }
-   
-   if ($continue) {
-      @session = grep {! -e "$dir_out/$_.txt"} @session;
-      unless (@session) {
-         exit;
-      }
-   }
-   
-   return \@session;
+   return check_session_list(\@session, $index_ref);
 }
+
+sub load_text_meta {
+  my $file = shift;
+
+  print STDERR "Loading metadata from $file\n";
+  
+  open(my $fh, "<:utf8", $file) or die ("Can't read $file: $!");
+  <$fh>;
+  
+  my %meta;
+  while (my $line = <$fh>) {
+    my @field = split(/\t/, $line);
+    $meta{$field[0]} = $field[1];
+  }
+  
+  return \%meta;
+}
+
+sub load_run_list {
+  my ($file_runs, $file_texts) = @_;
+  my %meta = %{load_text_meta($file_texts)};
+
+  print STDERR "Loading run list from $file_runs\n";
+  
+  open(my $fh, "<:utf8", $file_runs) or die ("Can't read $file_runs: $!");
+  <$fh>;
+  
+  my %index;
+  my %na_texts;
+  my %na_runs;
+  
+  while (my $line = <$fh>) {
+    my ($runid, $s, $t);
+    
+    if ($line =~ /(\d+)\t(\d+)\t(\d+)/) {
+      ($runid, $s, $t) = ($1, $2, $3);
+    }
+    
+    for ($s, $t) {
+      if (defined $meta{$_}) {
+        $_ = $meta{$_}
+      } else {
+        $na_texts{$_} = 1;
+        $na_runs{$runid} = 1;
+      }
+    }
+    
+    $index{$runid} = [$s, $t];
+  }
+  
+  for (sort keys %na_texts) {
+    print STDERR "warning: text $_ not defined in $file_texts\n";
+  }
+  print STDERR "\n" if %na_texts;
+  
+  for (sort keys %na_runs) {
+    print STDERR "warning: run $_ includes undefined texts\n"
+  }
+  print STDERR "\n" if %na_runs;
+    
+  return \%index;
+}
+
+sub check_session_list {
+  my ($ref_session, $ref_index) = @_;
+  my @session = @$ref_session;
+  my %index = %{$ref_index};
+  
+  my %status;
+
+  print STDERR "Checking session index\n";
+
+ID:  for my $id (@session) {
+    # if directory is incomplete, mark as redo
+    for my $suff (qw/meta source target score/) {
+      unless (-e catfile($dir_in, $id, "match.$suff")) {
+        $status{$id} = "INCOMPLETE";
+        next ID;
+      }
+    }
+
+    # does this session occur in the index?
+    if (defined $index{$id}) {
+
+      # if so, check that its source, target agree with index      
+      my $file_session_meta = catfile($dir_in, $id, "match.meta");
+      my %session_meta = %{retrieve($file_session_meta)};
+      
+      if ($session_meta{SOURCE} ne $index{$id}[0] or
+          $session_meta{TARGET} ne $index{$id}[1]) {
+            
+        # if metadata don't agree, mark it as bad
+        $status{$id} = "BAD_META";
+        next ID;
+
+      } else {
+        # if metadata agree, provisionally mark as ok
+        $status{$id} = "OK";
+
+        # but if --continue flag is set, see whether we've already processed it
+        if ($continue) {
+          my $file_out = catfile($dir_out, "$_.txt");
+          if (-e $file_out) {
+            $status{$id} = "CONTINUE";
+          }
+        }
+      }
+    } else {
+      # if session doesn't occur in index, flag it as weird
+      $status{$id} = "NO_INDEX";
+    }
+  }
+  
+  for (keys %index) {
+    unless (defined $status{$_}) {
+      $status{$_} = "NO_RUN";
+    }
+  }
+  
+  for my $id (sort keys %status) {
+    if ($status{$id} ne "OK" and $status{$id} ne "CONTINUE") {
+      print STDERR "$id: $status{$id}\n";
+    }
+  }
+  
+  return [grep {$status{$_} eq "OK"} sort keys %status];
+}
+
 
 sub process_scores {
    my ($file_session, $file_results) = @_;
