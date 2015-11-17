@@ -221,7 +221,7 @@ my %arg = (
    "--score" => "stem",
    "--dist" => "5",
    "--dibasis" => "freq",
-   "--cutoff" => "6"
+   "--cutoff" => "0"
 );
 
 # get user options

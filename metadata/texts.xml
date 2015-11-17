@@ -1,111 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-	<TessDocument id="">
-		<Author></Author>
-		<Display></Display>
-		<Abbr></Abbr>
-		<Lang></Lang>
-		<Prose></Prose>
-		<PrintSource></PrintSource>
-		<DigitalSourceDisplay></DigitalSourceDisplay>
-		<DigitalSourceURL></DigitalSourceURL>
-		<AddedBy></AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
+	Short list for Nicolaev experiments
 -->
 <Corpus>
-	<TessDocument id="ammianus.rerum_gestarum">
-		<Author>ammianus</Author>
-		<Display>Rerum Gestarum</Display>
-		<Abbr>amm.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Ammianus Marcellinus. With An English Translation. John C. Rolfe, PhD, Litt.D. Cambridge. Cambridge, Mass., Harvard University Press; London, William Heinemann, Ltd. 1935-1940.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2007.01.0081%3Abook%3D14%3Achapter%3D1%3Asection%3D1</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
-	<TessDocument id="anonymous.laudes_domini">
-		<Author>Anonymous</Author>
-		<Display>Laudes Domini</Display>
-		<Abbr>laud. dom.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Pieter Van Der Weijden, ed. Laudes domini: Tekst, vertaling en commentaar. Amsterdam: H. J. Paris, 1967.</PrintSource>
-		<DigitalSourceDisplay>Divus Angelus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.divusangelus.it/texts/sec4dc/laudesdomini.htm</DigitalSourceURL>
-		<AddedBy>Vincent Hunink</AddedBy>
-		<URI></URI>
-		<PubDate cert="0">326</PubDate>
-	</TessDocument>
-	<TessDocument id="apuleius.apologia">
-		<Author>apuleius</Author>
-		<Display>Apologia</Display>
-		<Abbr>apul. apol.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Apuleius.Apulei Platonici Madaurensis, Pro se de magia liber (Apologia). Rudolf Helm. Lipsiae: B.G. Teubneri. 1912.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0501</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
-	<TessDocument id="apuleius.florida">
-		<Author>apuleius</Author>
-		<Display>Florida</Display>
-		<Abbr>apul. fl.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Apuleius. Apulei Platonici Madaurensis Florida. Rudolf Helm. Lipsiae: Teubner, 1921.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0503</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
-	<TessDocument id="apuleius.metamorphoses">
-		<Author>apuleius</Author>
-		<Display>Metamorphoses</Display>
-		<Abbr>apul. met.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Apuleius. The Golden Ass, being the Metamorphoses of Lucius Apuleius. Stephen Gaselee. London: William Heinemann; New York: G.P. Putnam's Sons. 1915.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0503</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
-	<TessDocument id="aristotle.economics_book_3">
-		<Author>aristotle</Author>
-		<Display>Economics, book 3 (Latin)</Display>
-		<Abbr>aris. econ.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource></PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL></DigitalSourceURL>
-		<AddedBy></AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
-	<TessDocument id="augustine.epistulae_selections">
-		<Author>augustine</Author>
-		<Display>Epistulae: Selections</Display>
-		<Abbr>august. ep.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Select Letters. Augustine, Saint. James Houston Baxter. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1930.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0552</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>	
 	<TessDocument id="ausonius.cento_nuptialis">
 		<Author>ausonius</Author>
 		<Display>Cento Nuptialis</Display>
@@ -119,19 +16,6 @@
 		<URI>urn:cts:latinLit:stoa0045.stoa003.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
-	<TessDocument id="ausonius.commemoratio_professorum_burdigalensium">
-		<Author>ausonius</Author>
-		<Display>Commemoratio Professorum Burdigalensium</Display>
-		<Abbr>aus. prof.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0606</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>	
 	<TessDocument id="ausonius.cupido_cruciatus">
 		<Author>ausonius</Author>
 		<Display>Cupido Cruciatus</Display>
@@ -143,45 +27,6 @@
 		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0607</DigitalSourceURL>
 		<AddedBy>Katherine Roache</AddedBy>
 		<URI>urn:cts:latinLit:stoa0045.stoa005.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="ausonius.de_bissula">
-		<Author>ausonius</Author>
-		<Display>De Bissula</Display>
-		<Abbr>aus. biss.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0603</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa001.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="ausonius.de_herediolo">
-		<Author>ausonius</Author>
-		<Display>De Herediolo</Display>
-		<Abbr>aus. idyll. 3.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0608</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa006.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="ausonius.de_xii_caesaribus">
-		<Author>ausonius</Author>
-		<Display>Ausonii de XII Caesaribus per Suetonium Tranquillum scriptis</Display>
-		<Abbr>aus. caes.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0604</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa002.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
 	<TessDocument id="ausonius.eclogarum_liber">
@@ -208,19 +53,6 @@
 		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0610</DigitalSourceURL>
 		<AddedBy>Katherine Roache</AddedBy>
 		<URI>urn:cts:latinLit:stoa0045.stoa008.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="ausonius.epicedion_in_patrem">
-		<Author>ausonius</Author>
-		<Display>Epicedion in Patrem</Display>
-		<Abbr>aus. idyll. 2.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0607</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa005.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
 	<TessDocument id="ausonius.epigrammata_ausonii_de_diversis_rebus">
@@ -262,19 +94,6 @@
 		<URI>urn:cts:latinLit:stoa0045.stoa012.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
-	<TessDocument id="ausonius.gratiarum_actio">
-		<Author>ausonius</Author>
-		<Display>Gratiarum Actio</Display>
-		<Abbr></Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 2. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1921.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2008.01.0615%3Asection%3D1</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>
 	<TessDocument id="ausonius.griphus_ternarii_numeri">
 		<Author>ausonius</Author>
 		<Display>Griphus Ternarii numeri</Display>
@@ -286,19 +105,6 @@
 		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0607</DigitalSourceURL>
 		<AddedBy>Katherine Roache</AddedBy>
 		<URI>urn:cts:latinLit:stoa0045.stoa005.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="ausonius.libri_de_fastis_conclusio">
-		<Author>ausonius</Author>
-		<Display>Fasti</Display>
-		<Abbr>aus. fast.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0617</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa017.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
 	<TessDocument id="ausonius.ludus_septem_sapientum">
@@ -318,19 +124,6 @@
 		<Author>ausonius</Author>
 		<Display>Mosella</Display>
 		<Abbr>aus. mos.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0619</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa019.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="ausonius.oratio_consulis_ausonii_versibus_rhopalicis">
-		<Author>ausonius</Author>
-		<Display>Oratio Consulis Ausonii Versibus Ropalicis</Display>
-		<Abbr>aus. orat.</Abbr>
 		<Lang>la</Lang>
 		<Prose>0</Prose>
 		<PrintSource>Hugh G. Evelyn-White, Ausonius. Works.. London; Cambridge, Massachusetts: William Heinemann Ltd.; Harvard University Press, 1919.</PrintSource>
@@ -379,19 +172,6 @@
 		<URI>urn:cts:latinLit:stoa0045.stoa025.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
-	<TessDocument id="ausonius.precationes">
-		<Author>ausonius</Author>
-		<Display>Precationes</Display>
-		<Abbr>aus. idyll. 8_or_9.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0623</DigitalSourceURL>
-		<AddedBy>Katherine Roache</AddedBy>
-		<URI>urn:cts:latinLit:stoa0045.stoa026.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
 	<TessDocument id="ausonius.technopaegnion">
 		<Author>ausonius</Author>
 		<Display>Technopaegnion</Display>
@@ -405,32 +185,6 @@
 		<URI>urn:cts:latinLit:stoa0045.stoa028.perseus-lat1</URI>
 		<PubDate cert="0">399</PubDate>
 	</TessDocument>
-	<TessDocument id="ausonius.versus_paschales_pro_augusto_dicti">
-		<Author>ausonius</Author>
-		<Display>Versus Paschales Pro Augusto Dicti</Display>
-		<Abbr>aus. idyll.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Ausonius. Works. Ausonius, Vol 1. Ausonius, Decimus Magnus. Hugh G. Evelyn-White. William Heinemann Ltd.; Harvard University Press. London; Cambridge, Massachusetts. 1919.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2008.01.0624</DigitalSourceURL>
-		<AddedBy/>
-		<URI>urn:cts:latinLit:stoa0045.stoa027.perseus-lat1</URI>
-		<PubDate cert="0">399</PubDate>
-	</TessDocument>
-	<TessDocument id="bede.historiam_ecclesiasticam_gentis_anglorum">
-		<Author>bede</Author>
-		<Display>Historiam Ecclesiasticam Gentis Anglorum</Display>
-		<Abbr>bede hist.</Abbr>
-		<Lang>la</Lang>
-		<Prose>1</Prose>
-		<PrintSource>Charles Plummer, Historiam ecclesiasticam gentis Anglorum. Oxfordii: e typographeo Clarendoniano, 1896.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0135</DigitalSourceURL>
-		<AddedBy>Anna Glenn</AddedBy>
-		<URI></URI>
-		<PubDate cert="0"></PubDate>
-	</TessDocument>	
 	<TessDocument id="catullus.carmina">
 		<Author>catullus</Author>
 		<Display>Carmina</Display>
@@ -625,18 +379,6 @@
 		<URI/>
 		<PubDate cert="0"/>
 	</TessDocument>
-	<TessDocument id="dracontius.romulea_10">
-		<Author>dracontius</Author>
-		<Display>Medea</Display>
-		<Abbr>drac. rom.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource/>
-		<DigitalSourceDisplay>Monumenta Germaniae Historica</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.dmgh.de/de/fs1/object/display/bsb00000826_00006.html?sortIndex=010%3A010%3A0014%3A010%3A00%3A00</DigitalSourceURL>
-		<AddedBy>Lavinia Galli Milic</AddedBy>
-		<URI/>
-	</TessDocument>
 	<TessDocument id="ennius.annales">
 		<Author>ennius</Author>
 		<Display>Annales</Display>
@@ -660,32 +402,6 @@
 		<DigitalSourceURL/>
 		<AddedBy/>
 		<URI/>
-	</TessDocument>
-	<TessDocument id="horace.ars_poetica">
-		<Author>horace</Author>
-		<Display>Ars Poetica</Display>
-		<Abbr>hor. a.p.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>C. Smart, The Works of Horace. Philadelphia: Joseph Whetham, 1836.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0064</DigitalSourceURL>
-		<AddedBy>Chris Forstall</AddedBy>
-		<URI>urn:cts:latinLit:phi0893.phi006.perseus-lat1</URI>
-		<PubDate cert="1">-15</PubDate>
-	</TessDocument>
-	<TessDocument id="horace.carmen_saeculare">
-		<Author>horace</Author>
-		<Display>Carmen Saeculare</Display>
-		<Abbr>hor. c.s.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Paul Shorey, Horace: Odes and Epodes. Boston: Benj. H. Sanborn &amp; Co.</PrintSource>
-		<DigitalSourceDisplay>Latin Library</DigitalSourceDisplay>
-		<DigitalSourceURL>http://thelatinlibrary.com</DigitalSourceURL>
-		<AddedBy>Chris Forstall</AddedBy>
-		<URI/>
-		<PubDate cert="1">-15</PubDate>
 	</TessDocument>
 	<TessDocument id="horace.epistles">
 		<Author>horace</Author>
@@ -957,18 +673,6 @@
 		<AddedBy>Chris Forstall</AddedBy>
 		<URI>urn:cts:latinLit:phi0959.phi008.perseus-lat1</URI>
 		<PubDate cert="0">12</PubDate>
-	</TessDocument>
-	<TessDocument id="paulus_diaconus.carmina">
-		<Author>paulus_diaconus</Author>
-		<Display>Carmina</Display>
-		<Abbr>paul c.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource/>
-		<DigitalSourceDisplay/>
-		<DigitalSourceURL/>
-		<AddedBy/>
-		<URI/>
 	</TessDocument>
 	<TessDocument id="persius.satires">
 		<Author>persius</Author>
@@ -1293,19 +997,6 @@
 		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0560</DigitalSourceURL>
 		<AddedBy/>
 		<URI>urn:cts:latinLit:stoa0238.stoa008.perseus-lat1</URI>
-		<PubDate cert="0">405</PubDate>
-	</TessDocument>
-	<TessDocument id="prudentius.epilogus">
-		<Author>prudentius</Author>
-		<Display>Epilogus</Display>
-		<Abbr>prud. epil.</Abbr>
-		<Lang>la</Lang>
-		<Prose>0</Prose>
-		<PrintSource>Prudentius. Prudentius, Vol 2. H.J. Thomson. London; Cambridge, Massachusetts. Heinemann; Harvard University Press. 1953. Keyboarding.</PrintSource>
-		<DigitalSourceDisplay>Perseus</DigitalSourceDisplay>
-		<DigitalSourceURL>http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0561</DigitalSourceURL>
-		<AddedBy/>
-		<URI>urn:cts:latinLit:stoa0238.stoa009.perseus-lat1</URI>
 		<PubDate cert="0">405</PubDate>
 	</TessDocument>
 	<TessDocument id="prudentius.hamartigenia">
