@@ -15,7 +15,7 @@ It's meant to be run inside a virtual machine as the basis for the
 "la_verse" experiment set. The scores for individual runs are extracted
 using the ancillary script "extract_scores.pl". These scores will be used
 as input for Neil Bernstein and Kyle Gervais' intertextual density work
-as well as for Alex Nikolaev's group's network analysis.
+as well as for Alex Nikolaev and Ali Farasat's network analysis.
 
 =head1 OPTIONS AND ARGUMENTS
 
@@ -209,7 +209,7 @@ my $tessroot = "/home/vagrant/tesserae";
 my $file_runs = "/vagrant/metadata/index_run.txt";
 my $file_texts = "/vagrant/metadata/index_text.txt";
 my $dir_sessions = "/home/vagrant/working";
-my $parallel = 2;
+my $parallel = `. /vagrant/setup/tessrc; echo $TESSNCORES`;
 my $shuffle = 1;
 my $help = 0;
 
