@@ -1,4 +1,5 @@
-"All Latin Verse" Tesserae Experiments ======================================
+"All Latin Verse" Tesserae Experiments 
+======================================
 
 What you have here is, for the present, a collection of scripts that perform
 Tesserae searches on every possible pair of texts in the Latin verse corpus,
@@ -13,7 +14,8 @@ future, so this is essentially a temporary stop-gap. At the same time, it
 should be stable enough to rely on for ongoing research until a long-term
 solution can be developed.
 
-Quick Start -----------
+Quick Start
+-----------
 
 For this to work, you must have [VirtualBox](https://www.virtualbox.org) and
 [Vagrant](https://www.vagrantup.com) installed, and, at least initially, a
@@ -26,7 +28,8 @@ results saved to a new directory, __results__. When everything is done, use
 ```vagrant destroy``` to stop the VM and get rid of its invisible, but
 substantial, contents (the new __results__ folder won't be affected).
 
-Contents --------
+Contents
+--------
 
 This workset is arranged as follows. Here you have a Vagrant configuration file
 (__Vagrantfile__) that defines a standard Vagrant virtual machine, along with a
@@ -70,7 +73,8 @@ For available options and (slightly) more complete documentation, use
 scripts/all_la_verse.pl``` or (from inside the VM)
 ```/vagrant/scripts/all_la_verse.pl --help```.
 
-How to Work with Vagrant ------------------------
+How to Work with Vagrant
+------------------------
 
 If you're new to Vagrant, the basic idea is that the copy of Tesserae that's
 being used here is installed on a virtual machine managed behind the scenes by
@@ -100,7 +104,8 @@ do all your work inside a Terminal.
 
 You can read more about how Vagrant works at its website (http://vagrantup.com).
 
-Speed and Resources -------------------
+Speed and Resources
+-------------------
 
 I've turned down some of the dials on the VM by default (notwithstanding notes
 in the documentation of individual scripts to the contrary) just to be on the
@@ -123,7 +128,8 @@ needs before you can allot the VM more RAM; only that my development machine
 here in Geneva has 16 GB RAM and I can assign 8GB of that to the VM without
 experiencing any serious consequences.
 
-Ancillary Scripts -----------------
+Ancillary Scripts
+-----------------
 
  * __scripts/process_tess_an.R__
 
@@ -145,7 +151,8 @@ default you don't need it anyway, since __texts.xml__ has already been created.
 But if the corpus is updated before a new release of Tesserae makes this entire
 workset redundant, I can use this script again to get the updated metadata.
 
-Contact / Collaboration -----------------------
+Contact / Collaboration
+-----------------------
 
 I'm excited to work together with all our partners on this. I'm really hopeful
 that we can find substantial common ground between Neil B's and Alex's groups,
