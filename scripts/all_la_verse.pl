@@ -209,7 +209,7 @@ my $tessroot = "/home/vagrant/tesserae";
 my $file_runs = "/vagrant/metadata/index_run.txt";
 my $file_texts = "/vagrant/metadata/index_text.txt";
 my $dir_sessions = "/home/vagrant/working";
-my $parallel = `. /vagrant/setup/tessrc; echo $TESSNCORES`;
+my $parallel = `. /vagrant/setup/tessrc; echo \$TESSNCORES`;
 my $shuffle = 1;
 my $help = 0;
 

@@ -52,7 +52,8 @@ Print usage and exit.
 
 In theory, you can use --sep I<STRING> to specify the row separator for
 output, but F<process_tess_an.R> depends upon this being "\n". If you want
-to do something else with the scores, though, you might use e.g. --sep "," so that each run is represented by a single line of comma-separated scores.
+to do something else with the scores, though, you might use e.g. --sep "," so 
+that each run is represented by a single line of comma-separated scores.
 
 =head1 SEE ALSO
 
@@ -222,18 +223,23 @@ unless ($continue) {
 {
    my @sessions = @{get_session_list($dir_in, $file_runs, $file_texts)};
    
-   print STDERR "Reading " . scalar(@sessions) . " Tesserae sessions\n";
+   if (@sessions) {
 
-   my $t0 = time;
+     print STDERR "Reading " . scalar(@sessions) . " Tesserae sessions\n";
 
-   my $pr = ProgressBar->new(scalar(@sessions));
+     my $t0 = time;
 
-   for my $session (@sessions) {
-      process_scores("$dir_in/$session", "$dir_out/$session.txt");
-      $pr->advance;
+     my $pr = ProgressBar->new(scalar(@sessions));
+
+     for my $session (@sessions) {
+        process_scores("$dir_in/$session", "$dir_out/$session.txt");
+        $pr->advance;
+     }     
+     print sprintf("%.0f seconds\n", (time-$t0)/10^6);
+   } else {
+     
+     print STDERR "No new sessions to parse\n";
    }
-   
-   print sprintf("%.0f seconds\n", (time-$t0)/10^6);
 }
 
 #
@@ -354,7 +360,7 @@ ID:  for my $id (@session) {
 
         # but if --continue flag is set, see whether we've already processed it
         if ($continue) {
-          my $file_out = catfile($dir_out, "$_.txt");
+          my $file_out = catfile($dir_out, "$id.txt");
           if (-e $file_out) {
             $status{$id} = "CONTINUE";
           }
