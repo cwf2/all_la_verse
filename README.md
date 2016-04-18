@@ -82,7 +82,8 @@ How to Work with Vagrant
 You can log in to the VM by issuing the command ```vagrant ssh``` at your
 command line from within the present directory. The present directory will be
 accessible as __/vagrant/__. It's probably most intuitive to change to that
-directory and work there, e.g., ```
+directory and work there, e.g., 
+```
 	cd /vagrant
 	scripts/all_la_verse.pl
 ```
