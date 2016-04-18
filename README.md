@@ -132,7 +132,7 @@ Ancillary Scripts
 
  * __scripts/process_tess_an.R__
 
- A script I'm working on to transform the contents of the __results/__
+A script I'm working on to transform the contents of the __output/scores__
 directory into edges suitable for import into [Gephi](http://gephi.github.io).
 Nota bene: R isn't installed by default on the VM, as I generally work with
 this script on my own computer. If you want to run it from the VM, do ```sudo
