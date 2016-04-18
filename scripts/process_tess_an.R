@@ -1,16 +1,57 @@
-nodes <- read.table(file.path("metadata", "index_text.txt"), header=T, row.names=1)
-edges <- read.table(file.path("metadata", "index_run.txt"), 
-                    colClasses=c("character", "integer", "integer"), 
-                    header=T, row.names=1)
+#!/usr/bin/env Rscript --vanilla
+#
+# Read the output of all_la_verse and try to make a first approximation 
+# of the graph of intertextual connections, for debugging purposes.
+#
 
-nikolaev <- Vectorize(function(id, cutoff=8) {
-  file_scores <- file.path("scores", paste(id, "txt", sep="."))
+#
+# Variables:
+#
+
+# default locations of the data
+file_index_nodes <- file.path("output", "index_text.txt")
+file_index_edges <- file.path("output", "index_run.txt")
+dir_scores <- file.path("output", "scores")
+
+# default locations for output
+dir_output <- file.path("output", "gephi")
+filename_nodes <- "nodes.csv"
+filename_edges <- "edges.csv"
+
+#
+# Functions
+#
+
+nikolaev <- Vectorize(
+  # for each run id, read the list of scores, return number exceeding cutoff
   
-  scores <- scan(file_scores, sep="\n", quiet=T)
-  return(sum(scores>cutoff))
-})
+  function(id, cutoff=8) { 
+  
+    file_scores <- file.path(dir_scores, paste(id, "txt", sep="."))
+    scores <- scan(file_scores, sep="\n", quiet=T)
+    
+    return(sum(scores>cutoff))
+  }
+)
 
+#
+# Main 
+#
 
+# read the metadata defining the runs and texts
+
+cat("Reading nodes index", file_index_nodes, "\n")
+nodes <- read.table(file_index_nodes, header=T, row.names=1)
+
+cat("Reading edges index", file_index_edges, "\n")
+edges <- read.table(file_index_edges,
+  colClasses=c("character", "integer", "integer"), 
+  header=T, row.names=1
+)
+
+# calculate edge weights
+
+cat("Calculating edge weights\n")
 edges <- cbind(edges, 
    score=nikolaev(row.names(edges)),
    tok=as.numeric(nodes[as.character(edges$source), "tokens"]) *
@@ -25,6 +66,10 @@ edges <- cbind(edges,
 )
 edges <- edges[order(edges$nscore, decreasing=T),]
 
+# Calculate some interesting features of the texts,
+#  - we might look later to see how these relate to the scores
+
+cat("Calculating text features\n")
 feat <- data.frame(
   tok_s=as.numeric(nodes[as.character(edges$source), "tokens"]),
   tok_t=as.numeric(nodes[as.character(edges$target), "tokens"]),
@@ -41,7 +86,21 @@ feat <- data.frame(
   row.names=row.names(edges)
 )
 
-write.table(file="nodes.csv",
+#
+# Write output
+# 
+
+# create output directory if it doesn't exist
+if (! dir.exists(dir_output)) {
+  dir.create(dir_output)
+}
+
+# the nodes table, in Gephi format
+
+file_output_nodes <- file.path(dir_output, filename_nodes)
+cat("Writing nodes table", file_output_nodes, "\n")
+
+write.table(file=file_output_nodes,
   x=data.frame(
     id=as.integer(row.names(nodes)),
     nodes[,c("label", "auth", "date", "tokens", "phrases", "lines")]),
@@ -49,7 +108,12 @@ write.table(file="nodes.csv",
   row.names=F
 )
 
-write.table(file="edges.csv",
+# the edges table, in Gephi format
+
+file_output_edges <- file.path(dir_output, filename_edges)
+cat("Writing edges table", file_output_edges, "\n")
+
+write.table(file=file_output_edges,
   x=data.frame(
     id=as.integer(row.names(edges)),
     source=edges$source,

@@ -10,7 +10,7 @@ extract_scores.pl [options]
 
 =head1 DESCRIPTION
 
-This script reads through the "working" directory full of Tesserae session
+This script reads through the working directory full of Tesserae session
 data created by F<all_la_verse.pl> and produces, for each run, a text file
 containing only the scores for all of the hits. These can then be further
 digested using, e.g., F<process_tess_an.R>.
@@ -31,14 +31,15 @@ Number of decimal places to show in scores. Default is 1.
 
 ==item --in I<DIR>
 
-Location of session data. Default is F</home/vagrant/working>.
+Location of session data. Corresponds to --working option of F<all_la_verse.pl>.
+Default is F<$TESSTMP/la_verse-working>.
 
 ==item --out I<DIR>
 
 Location for results. This will be a directory to be filled with text files,
 one corresponding to each Tesserae session in the input directory. Unless
 the B<--continue> flag has been set, this contents of this directory will 
-be deleted before processing any of the runs. Default is "/vagrant/scores",
+be deleted before processing any of the runs. Default is F<output/scores>,
 which, unlike the "working" directory, is shared by the VM with the host,
 so you can see its contents after halting or destroying the virtual machine.
 
@@ -182,10 +183,10 @@ use Storable;
 my $continue = 0;
 my $dec = 1;
 my $sep = "\n";
-my $dir_in = "/home/vagrant/working";
-my $dir_out = "/vagrant/scores";
-my $file_texts = "/vagrant/metadata/index_text.txt";
-my $file_runs = "/vagrant/metadata/index_run.txt";
+my $dir_in = catfile($fs{tmp}, "la_verse-working");
+my $dir_out = catfile("output", "scores");
+my $file_texts = catfile("output", "index_text.txt");
+my $file_runs = catfile("output", "index_run.txt");
 my $help = 0;
 
 # get user options
@@ -232,7 +233,9 @@ unless ($continue) {
      my $pr = ProgressBar->new(scalar(@sessions));
 
      for my $session (@sessions) {
-        process_scores("$dir_in/$session", "$dir_out/$session.txt");
+        process_scores(
+          catfile($dir_in, $session), catfile($dir_out, "$session.txt")
+        );
         $pr->advance;
      }     
      print sprintf("%.0f seconds\n", (time-$t0)/10^6);
@@ -393,7 +396,7 @@ sub process_scores {
    
    my @scores;
    
-   my %match_score = %{retrieve($file_session . "/match.score")};
+   my %match_score = %{retrieve(catfile($file_session, "match.score"))};
    
    for my $unit_id_target (keys %match_score) {
       for my $unit_id_source (keys %{$match_score{$unit_id_target}}) {

@@ -11,11 +11,13 @@ all_la_verse.pl [options]
 =head1 DESCRIPTION
 
 This script does pairwise searches on the entire Latin verse corpus.
-It's meant to be run inside a virtual machine as the basis for the 
-"la_verse" experiment set. The scores for individual runs are extracted
-using the ancillary script "extract_scores.pl". These scores will be used
-as input for Neil Bernstein and Kyle Gervais' intertextual density work
-as well as for Alex Nikolaev and Ali Farasat's network analysis.
+The scores for individual runs are extracted using the ancillary script 
+F<scripts/extract_scores.pl>. 
+
+These scripts were designed to be run inside a Vagrant virtual machine as part
+of the "all_la_verse" experiments at Tesserae. The scores will be used as input
+for Neil Bernstein and Kyle Gervais' intertextual density work
+as well as for Alex Nikolaev and Ali Farasat's network analysis. 
 
 =head1 OPTIONS AND ARGUMENTS
 
@@ -31,38 +33,39 @@ duplicates an existing session in the output directory will be skipped.
 =item --texts I<FILE>
 
 Index of texts to be searched, with metadata. This file is created by
-F<nodelist.pl>. Default is "/vagrant/metadata/index_text.txt".
+F<nodelist.pl>. Default is F<output/index_text.txt>.
 
 =item --runs I<FILE>
 
 Name given to the index, created by the present script, of all Tesserae
 searches to be performed. Each row of this file has the form
+
+=begin text
+
   run_id    source_id  target_id
+
+=end text
+
 where I<source_id> and I<target_id> correspond to the I<id> column of
 the texts index specified as input above. The default name is 
-"/vagrant/metadata/index_runs.txt"
+F<output/index_runs.txt>.
 
 =item --working I<DIR>
 
 Path to working directory, where the completed tess searches store their
 session data. NB This directory is entirely cleared before starting, 
-unless the B<--continue> flag is set. Default value is 
-"/home/vagrant/working". Note that while Tesserae session data is not
-deleted when the program completes, it's stored in the vagrant home 
-directory, not in the folder shared by the host, so its contents are
-by default only visible from within the virtual machine. 
+unless the B<--continue> flag is set. The default value is 
+F<$TESSTMP/la_verse-working>. 
 
 =item --parallel I<N>
 
-The number of Tesserae searches to run in parallel. I've configured the
-Vagrantfile to give the guest two cores; the default value here is likewise
-2. In some cases, simultaneously running different searches on large texts 
-was eating up the VM's RAM: to combat this I've increased the RAM in the
-Vagrant file to 8GB and randomized the order of the searches so that you're
-less likely to have, e.g. two searches on Ov. Met., but in a pinch you can
-use --parallel 0 to ensure that only one search is run at a time. Or if you
-have the resources for it, increase the number of RAM and cores and use a
-higher value of I<N> to get things done faster.
+The number of Tesserae searches to run in parallel. This argument is passed to
+Parallel::ForkManager. The default value is 2. Simultaneously running different
+searches on large texts (e.g. Ovid's I<Metamorphoses> or Silius Italicus) can
+really eat up RAM. If memory runs out, the currently-running searches tend to
+abort and the next ones are run. This can be remedied later using the 
+B<--continue> flag (see below). Or use --parallel 0 to turn parallel processing
+off.
 
 =item B<--[no]shuffle>
 
@@ -70,6 +73,24 @@ Randomize the order in which the searches are performed. This decreases the
 chances of running simultaneous searches on a big text (see above). On by
 default; use B<--noshuffle> to have the searches performed in the order
 in which they appear in the runs index (see above).
+
+=item B<--[no]quiet>
+
+Pass the B<--quiet> flag to each of the Tesserae searches run. On by default.
+You can use B<--noquiet> for debugging if one or more of the searches fail, and
+you want to rerun to see what happens (B<--continue> is useful here). This only
+really works in conjunction with B<--parallel 0> since otherwise you get output
+from multiple searches overlapping.
+
+=item --[no]redo
+
+Automatically rerun any failed searches after the first batch is over. Any run
+that didn't produce the expected Tesserae binaries will be deleted and requeued.
+This is on by default. Reruns are done at the end, with the --parallel 0 
+and B<--noquiet> options set. The assumption is that most failures are the 
+result of memory-intensive searches overlapping, so turning off parallel
+processing should help. At the same time, turning off B<--quiet> lets you see 
+any diagnostic information from Tesserae about why a search is failing.
 
 =item B<--help>
 
@@ -201,19 +222,21 @@ use Pod::Usage;
 use File::Path qw/make_path remove_tree/;
 use Parallel::ForkManager;
 use XML::LibXML;
+use Storable;
 
 # initialize some variables
 
 my $continue = 0;
-my $tessroot = "/home/vagrant/tesserae";
-my $file_runs = "/vagrant/metadata/index_run.txt";
-my $file_texts = "/vagrant/metadata/index_text.txt";
-my $dir_sessions = "/home/vagrant/working";
-my $parallel = `. /vagrant/setup/tessrc; echo \$TESSNCORES`;
+my $file_runs = catfile("output", "index_run.txt");
+my $file_texts = catfile("output", "index_text.txt");
+my $dir_sessions = catfile($fs{tmp}, "la_verse-working");
+my $parallel = 2;
 my $shuffle = 1;
+my $quiet = 1;
+my $autoredo = 1;
 my $help = 0;
 
-my %arg = (
+my %tess_arg = (
    "--unit" => "line",
    "--feature" => "stem",
    "--stop" => "10",
@@ -228,11 +251,13 @@ my %arg = (
 
 GetOptions(
    "continue" => \$continue,
-   "texts" => \$file_texts,
-   "runs" => \$file_runs,
-   "working" => \$dir_sessions,
+   "texts=s" => \$file_texts,
+   "runs=s" => \$file_runs,
+   "working=s" => \$dir_sessions,
    "parallel=i" => \$parallel,
    "shuffle!" => \$shuffle,
+   "quiet!" => \$quiet,
+   "redo!" => \$autoredo,
    "help"  => \$help
 );
 
@@ -245,7 +270,7 @@ if ($help) {
 
 # load corpus
 
-my @corpus = @{load_corpus($file_texts)};
+my ($corpus_size, $ref_corpus) = load_corpus($file_texts);
 
 # create/clean output directories
 
@@ -256,53 +281,21 @@ unless ($continue) {
 
 # organize all runs in a list to facilitate parallelization
 
-my $ref_run = $continue ? load_runs($file_runs) : calc_runs($#corpus);
+my $ref_run = $continue ? load_runs($file_runs) : calc_runs($corpus_size);
 my $ndigit = ndigit($ref_run);
 write_index($file_runs, $ref_run, $ndigit) unless $continue;
 $ref_run = shuffle_runs($ref_run) if $shuffle;
 
-#
-# main loop
-#
-
-my $pm;
-if ($parallel) {
-   $pm = Parallel::ForkManager->new($parallel);
-}
-
-my @run = @$ref_run;
-
-for my $i (0..$#run) {
-   # fork
-   
-   if ($parallel) {
-      $pm->start and next;
-   }
-   
-   # params for this run
-
-   my $source = $corpus[$run[$i]->{source}]{label};
-   my $target = $corpus[$run[$i]->{target}]{label};
-
-   my $name = sprintf("%0${ndigit}d", $run[$i]{id});
-
-   # run tesserae search
-
-   my $cmd = join(" ",
-      "$tessroot/cgi-bin/read_table.pl",
-      "--source" => $source,
-      "--target" => $target,
-      %arg,
-      "--bin" => "$dir_sessions/$name",
-      "--quiet"
-   );
-
-   print STDERR sprintf("[%d/%d] %s\n", $i+1, scalar(@run), $cmd);
-   `$cmd`;
-
-   $pm->finish if $parallel;
-}
-$pm->wait_all_children if $parallel;
+# main loop : run searches, capture failed runs
+do_searches (
+  run => $ref_run,
+  corpus => $ref_corpus,
+  working => $dir_sessions,
+  parallel => $parallel,
+  quiet => $quiet,
+  tess_arg => \%tess_arg,
+  autoredo => $autoredo
+);
 
 
 #
@@ -336,11 +329,11 @@ sub load_corpus {
    }
    close($fh);
    
-   return \@corpus;
+   return (scalar(@corpus), \@corpus);
 }
 
 sub calc_runs {
-   my $n = shift;
+   my $n = $_[0] - 1;
    
    my @run;
    
@@ -378,7 +371,7 @@ sub load_runs {
    }
    close ($fh);
    
-   @run = grep {! -d "$dir_sessions/$_->{id}"} @run;
+   @run = grep {! -d catfile($dir_sessions, $_->{id})} @run;
    
    return \@run;
 }
@@ -406,7 +399,9 @@ sub write_index {
    print $fh join("\t", qw/id source target/) . "\n";
    
    for my $i (0..$#run) {
-      print $fh sprintf("%0${ndigit}i\t%i\t%i\n", $run[$i]->{id}, $run[$i]{source}, $run[$i]{target});
+      print $fh sprintf("%0${ndigit}i\t%i\t%i\n", 
+        $run[$i]->{id}, $run[$i]{source}, $run[$i]{target}
+      );
    }
    
    close ($fh);
@@ -425,4 +420,185 @@ sub ndigit {
    }
    
    return length($max);
+}
+
+
+sub do_searches {
+  # main subroutine: run all the queued searches
+  
+  my %opt = @_;
+  
+  my @run = @{$opt{run}};
+  my @corpus = @{$opt{corpus}};
+  my $quiet = $opt{quiet};
+  my $parallel = $opt{parallel};
+  my $working = $opt{working};
+  my $tessroot = $opt{tessroot};
+  my $autoredo = $opt{autoredo};
+  my %tess_arg = %{$opt{tess_arg}};
+  
+  # set up parallel processing
+  my $pm;
+  if ($parallel) {
+     $pm = Parallel::ForkManager->new($parallel);
+  }
+  
+  # loop through queued searches
+  for my $i (0..$#run) {
+     # fork
+   
+     if ($parallel) {
+        $pm->start and next;
+     }
+   
+     # params for this run
+
+     my $source = $corpus[$run[$i]->{source}]{label};
+     my $target = $corpus[$run[$i]->{target}]{label};
+
+     my $name = sprintf("%0${ndigit}d", $run[$i]{id});
+
+     # run tesserae search
+     my $exec = catfile($fs{cgi}, "read_table.pl");
+     unless (-e $exec) {
+       die "Tesserae script $exec doesn't exist";
+     }
+     unless (-x $exec) {
+       die "Can't execute Tesserae script $exec";
+     }
+     
+     my @args = (
+        "--source" => $source,
+        "--target" => $target,
+        %tess_arg,
+        "--bin" => catdir($working, $name)
+     );
+     if ($quiet) {
+       push @args, "--quiet";
+     }
+     my $cmd = join(" ", $exec, @args);
+
+     print STDERR sprintf("[%d/%d] %s\n", $i+1, scalar(@run), $cmd);
+     system $cmd;
+
+     $pm->finish if $parallel;
+  }
+  $pm->wait_all_children if $parallel;
+  
+  # check for failed runs
+  my @fail = check_incomplete($opt{run}, $opt{corpus}, $working);
+  
+  if (@fail) {
+    # optionally attempt to redo failed runs
+    if ($autoredo) {
+    
+      # delete bad runs from working directory
+      print STDERR "Autoredo: cleaning mangled data\n";
+    
+      for my $run (@fail) {
+        my $session = catdir($working, sprintf("%0${ndigit}d", $run->{id}));
+        print STDERR "\t" . $session . "\n";
+        remove_tree($session);
+      }
+    
+      # re-invoke the main loop
+      #  - failed run list as new queue
+      #  - turn off parallel processing
+      #  - turn off quiet
+      #  - turn off auto-redo to avoid infinite loop
+    
+      do_searches(
+        run => \@fail,
+        corpus => $ref_corpus,
+        working => $dir_sessions,
+        parallel => 0,
+        quiet => 0,
+        tess_arg => \%tess_arg,
+        autoredo => 0
+      );
+    
+    } else {
+      # if autoredo is off (or has already been tried once)
+      #  just warn about missed runs
+    
+      print STDERR "Consider rerunning with --continue --noquiet --parallel 0\n";
+    }
+  }
+}
+
+
+sub check_incomplete {
+  my ($ref_run, $ref_corpus, $working) = @_;
+  my @run = @$ref_run;
+  my @corpus = @$ref_corpus;
+  
+  my @fail;
+
+  print STDERR "Checking integrity of results\n";
+  
+RUN: for my $run (@run) {
+    my $id = $run->{id};
+    my $source = $run->{source};
+    my $target = $run->{target};
+    
+    # is there any sign the search happened at all?
+    my $session = catdir($working, sprintf("%0${ndigit}d", $id));
+    
+    unless (-d $session) {
+      push @fail, {
+        id => $id,
+        source => $source,
+        target => $target,
+        status => "NO DATA"
+      };
+      next RUN;
+    }
+  
+    # are the Tesserae binaries all there?
+    for my $suff (qw/meta source target score/) {
+      unless (-e catfile($session, "match.$suff")) {
+        push @fail, {
+          id => $id,
+          source => $source,
+          target => $target,
+          status => "INCOMPLETE"
+        };
+        next RUN;
+      }
+    }
+
+    # check that source, target agree with index      
+    my $file_meta = catfile($session, "match.meta");
+    my %meta = %{retrieve($file_meta)};
+      
+    # if metadata don't agree, mark it as bad
+    if ($meta{SOURCE} ne $corpus[$source]{label} 
+        or $meta{TARGET} ne $corpus[$target]{label}) {
+      push @fail, {
+        id => $id,
+        source => $source,
+        target => $target,
+        status => "BAD METADATA"
+      };
+    }
+  }
+
+  # put failed runs back in order, just for the heck of it
+  @fail = sort {$a->{id} <=> $b->{id}} @fail;
+  
+  if (@fail) {
+    print STDERR sprintf("Warning: %i run%s failed!\n", scalar(@fail),
+      scalar(@fail) > 1 ? "s" : "");
+
+    for my $run (@fail) {
+      print STDERR join("\t", "", 
+        $run->{id}, 
+        $corpus[$run->{source}]{label}, 
+        $corpus[$run->{target}]{label}, 
+        $run->{status}
+      ) . "\n";
+    }
+  }
+  
+  return @fail;
 }

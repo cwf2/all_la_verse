@@ -24,9 +24,9 @@ directory, do ```vagrant up```. The virtual machine image will be downloaded
 from the Internet and booted (takes a while); then Tesserae itself will be
 downloaded from the Internet and installed on the VM (takes even longer).
 Finally, the default search set of all Latin verse texts will be run, and the
-results saved to a new directory, __results__. When everything is done, use
+results saved to a new directory, __output__. When everything is done, use
 ```vagrant destroy``` to stop the VM and get rid of its invisible, but
-substantial, contents (the new __results__ folder won't be affected).
+substantial, contents (the new __output__ folder won't be affected).
 
 Contents
 --------
@@ -34,39 +34,42 @@ Contents
 This workset is arranged as follows. Here you have a Vagrant configuration file
 (__Vagrantfile__) that defines a standard Vagrant virtual machine, along with a
 couple of bootstrap scripts (__setup/bootstrap.sh__,
-__setup/setup.tesserae.sh__) that install Tesserae on the VM, cloning my repo
-rather than the official one. There's also some extra metadata here
-(__metadata/authors.xml__, __metadata/texts.xml__), extracted from the
-*metadata.db* branch of my Tesserae repo, including approximate publication
-dates for the Latin verse texts. Finally, there are some perl scripts to build
+__setup/setup.tesserae.sh__) that install Tesserae on the VM, cloning the
+official [Tesserae repo](https://github.com/tesserae/tesserae). There's also
+some extra metadata here
+(__metadata/authors.xml__, __metadata/texts.xml__), including approximate publication
+dates for the Latin verse texts. 
+One day this information will be standard in Tesserae, but not yet. If you want
+to perform searches on your own texts, you will have to add at least minimal
+entries to these files on the model of what's there already.
+Finally, there are some perl scripts to build
 and carry out a list of searches using the Tesserae installation on the VM,
 parse the results, and store them in a directory shared by the VM with its host:
 
  * __scripts/nodelist.pl__
 
  This script parses the XML metadata files and produces a plain table
-(_metadata/index_text.txt_) of relevant texts with useful statistics such as
+(__output/index_text.txt__) of relevant texts with useful statistics such as
 token, stem, line, and phrase counts that could be useful in calculating
 intertextual density.
 
  * __scripts/all_la_verse.pl__
 
  This is the principal script of this workset, generating and then carrying out
-a list of Tesserae searches. It saves the list at __metadata/index_run.txt__
+a list of Tesserae searches. It saves the list at __output/index_run.txt__
 for future reference. Nota bene: the binary Tesserae results are saved to the
 home directory of the virtual machine (__/home/vagrant/working__), so they're
 not accessible from the host and will be erased by a subsequent ```vagrant
-destroy```.
+destroy```. (See script documentation to change this behaviour.)
 
  * __scripts/extract_scores.pl__
 
  This script parses the results of the searches performed by
-__all_la_verse.pl__. The results are saved to __/vagrant/results__ on the VM,
-which means they should be shared with the host (i.e. in the current
-directory). By default the results for each search are saved as a separate text
+__all_la_verse.pl__. The results are saved to __output/scores__. 
+By default the results for each search are saved as a separate text
 file, consisting of just the scores for each result, to one decimal place,
 separated by newlines. The results for each search are named only by a serial
-number, use __metadata/index_run.txt__ to locate a specific search.
+number, use __output/index_run.txt__ to locate a specific search.
 
 For available options and (slightly) more complete documentation, use
 ```perldoc``` or ```--help``` with any of the above scripts, e.g. ```perldoc
@@ -76,26 +79,18 @@ scripts/all_la_verse.pl``` or (from inside the VM)
 How to Work with Vagrant
 ------------------------
 
-If you're new to Vagrant, the basic idea is that the copy of Tesserae that's
-being used here is installed on a virtual machine managed behind the scenes by
-VirtualBox. This means that you don't have to worry about the particulars of
-installing it on your own machine (Mac, Windows, whatever). It also means that
-the scripts here aren't meant to be run on your computer, but on the VM. The
-present directory is shared between your computer and the VM (where it appears
-as __/vagrant/__), so if you want to edit the scripts using your favourite
-editor, go ahead, and the changes will be reflected in real time on the virtual
-machine. Likewise, anything you create in this directory will appear on the VM,
-and anything the VM creates (like the __results__ folder) will be visible on
-your machine.
-
 You can log in to the VM by issuing the command ```vagrant ssh``` at your
-command line from within the present directory. Then you can run these scripts
-yourself or create your own to work with the virtual Tesserae or the search
-results; you'll just have to do it from the command line interface. Just
-remember that the scripts will probably only work properly when they're running
-on the VM: it's easy to get confused and accidentally run them on your own
-computer, where Tesserae is probably not installed, or not where these scripts
-expect it to be.
+command line from within the present directory. The present directory will be
+accessible as __/vagrant/__. It's probably most intuitive to change to that
+directory and work there, e.g., ```
+	cd /vagrant
+	scripts/all_la_verse.pl
+```
+You can create new files and/or modify these ones either directly on the host
+or from the command-line in the VM. Just remember that the scripts will
+probably only work properly when they're running on the VM: it's easy to get
+confused and accidentally run them on your own computer, where Tesserae is
+probably not installed, at least not where these scripts expect it to be.
 
 The way I usually work is to have the scripts open in my editor on my own
 computer, and an ssh session open at the same time to work on the VM. But you
@@ -104,29 +99,32 @@ do all your work inside a Terminal.
 
 You can read more about how Vagrant works at its website (http://vagrantup.com).
 
-Speed and Resources
--------------------
+Known Issues
+------------
 
-I've turned down some of the dials on the VM by default (notwithstanding notes
-in the documentation of individual scripts to the contrary) just to be on the
-conservative side. If you have enough RAM, though, then before doing anything
-else you might edit the __Vagrantfile__ and bump up both the RAM and the number
-of cpus allotted to the virtual machine (line 50-51). Then, in __setup/tessrc__
-adjust . Do this before booting the VM.
+__Speed and resources__
 
-These changes should significantly speed things up, if your hardware supports
-them. The idea is to let the VM run Tesserae searches simultaneously using its
-two cores, but it only works if it has enough RAM for those occasions where by
-chance two searches involving major epics (e.g. Silius Italicus _Punica_ vs.
-Ovid _Metamorphoses_) bump up against each other and indices for four large
-texts have to be in memory all at once. If you don't have enough RAM, the VM
-starts swapping and gets bogged down. I'm afraid I don't really understand how
-this works in a virtual machine, but in practice it can be significantly slower
-to try to run things in parallel without sufficient RAM than just to run one
-search at a time. Neither do I know exactly what resources your own computer
-needs before you can allot the VM more RAM; only that my development machine
-here in Geneva has 16 GB RAM and I can assign 8GB of that to the VM without
-experiencing any serious consequences.
+Some of the searches performed as part of this experiment are very demanding,
+in particular of RAM. A search of the entirety of Silius Italicus' _Punica_
+against Ovid's _Metamorphoses_, for example, uses more than 4 GB of memory.
+The __Vagrantfile__ allots 6 GB of RAM to the virtual machine. If you don't have
+this, I'm not sure what will happen. You can set the value lower, but some
+individual searches may fail. If this happens, less-intensive searches won't be
+affected, but you'll find the failed searches lacking from the __output/scores__
+folder.
+
+By default, the experiment allots two cores to the VM, and runs searches in
+parallel to save time. There is the chance that, even if each search
+individually fits in memory, two large ones will collide during processing.
+In this case, one or both will fail, and the rest will go on as expected. There
+are mechanisms for catching this and redoing the lost searches -- by default, 
+one repeat will be attempted if failures are detected. During a redo run, the
+searches are run serially rather than in parallel, and the __-quiet__ flag is
+turned off, so you'll see diagnostic information from individual Tesserae 
+searches.
+
+One day, Tesserae will be much less greedy for memory, but not today, I'm
+afraid.
 
 Ancillary Scripts
 -----------------
@@ -139,17 +137,6 @@ Nota bene: R isn't installed by default on the VM, as I generally work with
 this script on my own computer. If you want to run it from the VM, do ```sudo
 apt-get install r-base``` or append *r-base* to the list of apt packages in
 __setup/bootstrap.sh__.
-
- * __scripts/metadata_export_text.pl__
-
- This script is used to pull XML metadata from individual Tesserae texts and
-concatenate it in the file __texts.xml__. It isn't meant to be run on the VM;
-it only works with the *metadata_db* branch of my Tesserae code, where Tess
-files are stored in XML format. I only saved it here because it pertained to
-this code and probably won't be needed in the actual *metadata_db* branch. By
-default you don't need it anyway, since __texts.xml__ has already been created.
-But if the corpus is updated before a new release of Tesserae makes this entire
-workset redundant, I can use this script again to get the updated metadata.
 
 Contact / Collaboration
 -----------------------

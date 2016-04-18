@@ -24,19 +24,20 @@ ratios for both words and stems.
 =item --authors I<FILE>
 
 The input file giving author information. Default is 
-"/vagrant/metadata/authors.xml", taken from the "metadata_db" branch of my
-Tesserae repo.
+F<metadata/authors.xml> (Copied from the I<metadata_db> branch of my
+Tesserae repo.)
 
 =item --texts I<FILE>
 
 Second input file, giving text information. Default is 
-"/vagrant/metadata/texts.xml", also from "metadata_db".
+F<metadata/texts.xml>, also from branch I<metadata_db>.
 
 ==item --output I<FILE>
 
-Name for the resulting table. Default is "/vagrant/metadata/index_text.txt".
-Note that F<all_la_verse.pl> and F<process_tess_an.R> need this, so you'll
-have to make changes accordingly if you specify something else here.
+Name for the resulting table. Note that F<all_la_verse.pl> and 
+F<process_tess_an.R> need this, so you'll have to make changes accordingly if 
+you specify something else here. Default is F<output/index_text.txt>. Will try
+to create parent directories if they don't exist. Use '-' for stdout.
 
 =item B<--help>
 
@@ -45,6 +46,12 @@ Print usage and exit.
 =back
 
 =head1 KNOWN BUGS
+
+This script is designed to be called by F<setup/bootstrap> during provisioning
+of the Vagrant virtual machine we use for our experiments (see F<README.md>).
+If you C<vagrant ssh> into the vm and run the script manually, either do so
+from within F</vagrant> or specify the locations of the input and output using
+command line options.
 
 =head1 SEE ALSO
 
@@ -77,7 +84,7 @@ Portions created by the Initial Developer are Copyright (C) 2007 Research
 Foundation of State University of New York, on behalf of University at
 Buffalo. All Rights Reserved.
 
-Contributor(s): Chris Forstall
+Contributor(s): Chris Forstall <cforstall@gmail.com>
 
 Alternatively, the contents of this file may be used under the terms of
 either the GNU General Public License Version 2 (the "GPL"), or the GNU
@@ -165,12 +172,14 @@ use Pod::Usage;
 
 use XML::LibXML;
 use Storable;
+use File::Spec::Functions qw/:ALL/;
+use File::Path qw/make_path remove_tree/;
 
 # initialize some variables
 
-my $file_auth = "/vagrant/metadata/authors.xml";
-my $file_text = "/vagrant/metadata/texts.xml";
-my $file_out = "/vagrant/metadata/index_text.txt";
+my $file_auth = "metadata/authors.xml";
+my $file_text = "metadata/texts.xml";
+my $file_out = "output/index_text.txt";
 my $help = 0;
 
 # get user options
@@ -204,7 +213,7 @@ my @texts = sort {$meta{$a}->{date} <=> $meta{$b}->{date}} sort keys %meta;
 # retrieve metadata / calc features for each text in turn;
 # write the index. give each text a numeric id.
 
-open (my $fh, ">:utf8", $file_out) or die "Can't write $file_out: $!";
+my $fh = get_output_handle($file_out);
 
 my @fields = qw/auth date tokens stems lines phrases ttr_w ttr_s/;
 
@@ -226,35 +235,52 @@ close($fh);
 #
 
 sub load_auth {
-   my $file = shift;
+  # load author metadata from accompanying XML file
+  
+  my $file = shift;
+
+  # make sure the file exists
+  unless (-s $file) {
+    die "Author list $file doesn't exist or has no contents";
+  }
+  
+  # parse the XML
+  print STDERR "Reading $file\n";
    
-   print STDERR "Reading $file\n";
+  my %auth_date;
    
-   my %auth_date;
+  my $doc = XML::LibXML->load_xml(location=>$file);
    
-   my $doc = XML::LibXML->load_xml(location=>$file);
-   
-   for my $auth_node ($doc->findnodes("//TessAuthor")) {
-      my $id = $auth_node->getAttribute("id");
-      my $date = $auth_node->findvalue("Death");
+  for my $auth_node ($doc->findnodes("//TessAuthor")) {
+    my $id = $auth_node->getAttribute("id");
+    my $date = $auth_node->findvalue("Death");
       
-      if (defined $date and $date =~ /[0-9]/) {
-         $auth_date{$id} = $date;
-      }
-   }
+    if (defined $date and $date =~ /[0-9]/) {
+      $auth_date{$id} = $date;
+    }
+  }
    
-   return \%auth_date;
+  return \%auth_date;
 }
 
+
 sub load_text {
+  # load text metadata from accompanying XML file
+  
    my ($file, $ref_auth_date) = @_;
+
+   # make sure the file exists
+   unless (-s $file) {
+     die "Text list $file doesn't exist or has no contents";
+   }
    
+   # parse the XML
    print STDERR "Reading $file\n";
    
    my %auth_date = %$ref_auth_date;
    
    my %meta;
-   
+      
    my $doc = XML::LibXML->load_xml(location=>$file);
    
    for my $text_node ($doc->findnodes("//TessDocument")) {
@@ -275,58 +301,99 @@ sub load_text {
    return \%meta; 
 }
 
-sub load_tess {
-   my $ref = shift;
-   
-   print STDERR "Extracting Tesserae data\n";
-   
-   my %meta = %$ref;
-   
-   my $pm = ProgressBar->new(scalar(keys %meta));
-      
-   for my $text_id (keys %meta) {
-      my $base = catfile($fs{data}, "v3", "la", $text_id, $text_id);
 
-      my ($tokens, $ttr_w) = wc($base . ".freq_stop_word");
-      my ($stems, $ttr_s) = wc($base . ".freq_stop_stem");
-      
-      my $lines = scalar(@{retrieve($base . ".line")});
-      my $phrases = scalar(@{retrieve($base . ".phrase")});
-      
-      $meta{$text_id} = { %{$meta{$text_id}},
-        tokens => $tokens,
-        stems => $stems,
-        lines => $lines,
-        phrases => $phrases,
-        ttr_w => $ttr_w,
-        ttr_s => $ttr_s 
-      };
-      
-      $pm->advance;
-   }
+sub load_tess {
+  # get textual features from Tesserae database
+  my $ref = shift;
    
-   return \%meta;
+  print STDERR "Extracting Tesserae data\n";
+   
+  my %meta = %$ref;
+   
+  my $pm = ProgressBar->new(scalar(keys %meta));
+      
+  for my $text_id (keys %meta) {
+    my $base = catfile($fs{data}, "v3", "la", $text_id, $text_id);
+
+    my ($tokens, $ttr_w) = wc($base . ".freq_stop_word");
+    my ($stems, $ttr_s) = wc($base . ".freq_stop_stem");
+    
+    my $lines = scalar(@{retrieve($base . ".line")});
+    my $phrases = scalar(@{retrieve($base . ".phrase")});
+    
+    $meta{$text_id} = { %{$meta{$text_id}},
+      tokens => $tokens,
+      stems => $stems,
+      lines => $lines,
+      phrases => $phrases,
+      ttr_w => $ttr_w,
+      ttr_s => $ttr_s 
+    };
+    
+    $pm->advance;
+  }
+   
+  return \%meta;
 }
 
+
 sub wc {
-   my $file = shift;
+  # extract token counts from a Tesserae frequency table
+  my $file = shift;
+
+  # make sure the file exists
+  unless (-s $file) {
+    die "File $file doesn't exist or has no contents";
+  }
+  
+  my $count; # raw count
+  my $ttr;   # type-token ratio
+  
+  open (my $fh, "<:utf8", $file) or die "Can't read $file: $!";
    
-   my $count;
-   my $ttr;
+  my $head = <$fh>;
+  $head =~ /count: (\d+)/;
+  $count = $1;
    
-   open (my $fh, "<:utf8", $file) or die "$!";
+  while (my $line = <$fh>) {
+    $ttr ++;
+  }
    
-   my $head = <$fh>;
-   $head =~ /count: (\d+)/;
-   $count = $1;
+  $ttr /= $count;
    
-   while (my $line = <$fh>) {
-      $ttr ++;
-   }
+  close $fh;
    
-   $ttr /= $count;
-   
-   close $fh;
-   
-   return ($count, $ttr);
+  return ($count, $ttr);
+}
+
+
+sub get_output_handle {
+  # attempt to create output file
+
+  my $file = shift;
+  my $fh;
+  
+  if ($file eq "-") {
+    # output to stdout if "-" given as filename
+    $fh = *STDOUT;
+    
+  } else {
+    if (-e $file) {
+      # warn if clobbering
+      print STDERR "Clobbering $file\n";
+
+    } else {
+      # try to create missing parent directories
+      my $parent = catpath((splitpath($file))[0,1]);
+      
+      unless (-d $parent) {
+        print STDERR "Creating $parent\n";
+        make_path($parent) or die "Couldn't create $parent: #!";
+      }
+    }
+    
+    open ($fh, ">:utf8", $file) or die "Couldn't write to $file: $!";
+  }
+  
+  return $fh;
 }

@@ -2,8 +2,6 @@
 
 set -x
 
-. /vagrant/setup/tessrc
-
 #
 # install necessary software on vm
 #
@@ -23,10 +21,25 @@ sudo apt-get install -y \
 
 sudo -u vagrant cp /vagrant/setup/vimrc /home/vagrant/.vimrc
 
+#
+# install Tesserae
+#
+
 sudo -u vagrant /vagrant/setup/setup.tesserae.sh
 
+
+#
+# the la_verse experiment
+#
+
+cd /vagrant
+
+# generate index of all texts from Tesserae metadata
 sudo -u vagrant /vagrant/scripts/nodelist.pl
 
-sudo -u vagrant /vagrant/scripts/all_la_verse.pl --parallel 2
+# enque all the searches, then run them
+sudo -u vagrant /vagrant/scripts/all_la_verse.pl
 
+# read the Tesserae results and extract just the scores
 sudo -u vagrant /vagrant/scripts/extract_scores.pl
+
