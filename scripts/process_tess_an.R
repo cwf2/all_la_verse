@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript --vanilla
 #
-# Read the output of all_la_verse and try to make a first approximation 
+# Read the output of all_la_verse and try to make a first approximation
 # of the graph of intertextual connections, for debugging purposes.
 #
 
@@ -22,20 +22,40 @@ filename_edges <- "edges.csv"
 # Functions
 #
 
-nikolaev <- Vectorize(
+itext.density <- Vectorize(
   # for each run id, read the list of scores, return number exceeding cutoff
-  
-  function(id, cutoff=8) { 
-  
+
+  function(id, cutoff=8, dens.fun=sum) {
+
     file_scores <- file.path(dir_scores, paste(id, "txt", sep="."))
     scores <- scan(file_scores, sep="\n", quiet=T)
-    
-    return(sum(scores>cutoff))
+
+    dens.fun(scores[scores>=cutoff])
+  }, vectorize.args = "id"
+)
+
+same.auth <- Vectorize(
+  # TRUE if source and target have same author,
+  # FALSE otherwise
+
+  function(label) {
+    auth <- unlist(strsplit(label, split="~", fixed=T))
+    auth <- sub("\\..*", "", auth)
+    auth[1] == auth[2]
   }
 )
 
+lscale <- function(x) {
+  # linear rescaling to new range
+
+  xmax <- max(x)
+  xmin <- min(x)
+
+  (x - xmin) / (xmax - xmin)
+}
+
 #
-# Main 
+# Main
 #
 
 # read the metadata defining the runs and texts
@@ -44,26 +64,29 @@ cat("Reading nodes index", file_index_nodes, "\n")
 nodes <- read.table(file_index_nodes, header=T, row.names=1)
 
 cat("Reading edges index", file_index_edges, "\n")
-edges <- read.table(file_index_edges,
-  colClasses=c("character", "integer", "integer"), 
-  header=T, row.names=1
+edge.id <- read.table(file_index_edges,
+  colClasses=c("character", "integer", "integer"),
+  header=T
 )
 
 # calculate edge weights
 
 cat("Calculating edge weights\n")
-edges <- cbind(edges, 
-   score=nikolaev(row.names(edges)),
-   tok=as.numeric(nodes[as.character(edges$source), "tokens"]) *
-     as.numeric(nodes[as.character(edges$target), "tokens"]),
-   label=paste(sep="~",
+edges <- data.frame(
+  id = edge.id$id,
+  source = edge.id$source,
+  target = edge.id$target,
+  score = itext.density(edge.id$id),
+  tok = as.numeric(nodes[as.character(edge.id$source), "tokens"]) *
+     as.numeric(nodes[as.character(edge.id$target), "tokens"]),
+  label = paste(sep="~",
      nodes[as.character(edges$source), "label"],
      nodes[as.character(edges$target), "label"]
-   )
+   ),
+  stringsAsFactors = F
 )
-edges <- cbind(edges,
-  nscore = round(10^8 * edges$score/edges$tok, digits=2)
-)
+edges$nscore <- round(10^8 * edges$score/edges$tok, digits=2)
+edges$scaled <- lscale(edges$nscore)
 edges <- edges[order(edges$nscore, decreasing=T),]
 
 # Calculate some interesting features of the texts,
@@ -88,7 +111,7 @@ feat <- data.frame(
 
 #
 # Write output
-# 
+#
 
 # create output directory if it doesn't exist
 if (! dir.exists(dir_output)) {
